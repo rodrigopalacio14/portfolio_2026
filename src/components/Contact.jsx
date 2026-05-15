@@ -34,71 +34,46 @@ export default function Contact({ t, lang }) {
             </p>
 
             <div className="mt-9 flex flex-wrap justify-center gap-4">
-              <a
-                href="mailto:rodripalacio14@gmail.com"
-                className="
-                  inline-flex items-center gap-2
-                  rounded-full
-                  bg-gradient-to-r
-                  from-cyan-400
-                  to-blue-500
-                  px-6 py-3
-                  font-semibold
-                  text-white
-                  shadow-lg shadow-cyan-500/25
-                  transition-all
-                  duration-300
-                  hover:-translate-y-1
-                  hover:shadow-cyan-400/40
-                "
-              >
-                <Mail size={18} />
-                {t.contactButtons.email}
-              </a>
+             
 
               <a
                 href="https://www.linkedin.com/in/rodrigo-palacio-schunke-07438613a/"
                 target="_blank"
                 className="
-                  inline-flex items-center gap-2
                   rounded-full
-                  border border-white/15
-                  bg-white/[0.06]
+                  bg-[#0A66C2]
                   px-6 py-3
                   font-semibold
                   text-white
-                  backdrop-blur-sm
-                  transition-all
-                  duration-300
+                  shadow-lg shadow-blue-600/25
+                  transition-all duration-300
                   hover:-translate-y-1
-                  hover:border-cyan-400/30
-                  hover:bg-white/[0.09]
+                  hover:bg-[#004182]
                 "
               >
                 <span className="font-bold">in</span>
                 {t.contactButtons.linkedin}
               </a>
               <a
-                href="https://wa.me/5493517868252"
-                target="_blank"
-                className="
-                  inline-flex items-center gap-2
-                  rounded-full
-                  border border-white/15
-                  bg-white/[0.06]
-                  px-6 py-3
-                  font-semibold
-                  text-white
-                  backdrop-blur-sm
-                  transition-all
-                  duration-300
-                  hover:-translate-y-1
-                  hover:border-cyan-400/30
-                  hover:bg-white/[0.09]
-                "
-              >
-                WhatsApp
-              </a>
+                  href="https://wa.me/5493517868252"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="
+                    inline-flex items-center gap-2
+                    rounded-full
+                    bg-[#25D366]
+                    px-6 py-3
+                    font-semibold
+                    text-white
+                    shadow-lg shadow-green-500/25
+                    transition-all duration-300
+                    hover:-translate-y-1
+                    hover:bg-[#1ebe5d]
+                  "
+                >
+                  WhatsApp
+                </a>
+              
             </div>
 
             <div className="mt-14">

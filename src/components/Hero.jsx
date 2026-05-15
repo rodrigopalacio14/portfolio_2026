@@ -1,5 +1,5 @@
 import profileImg from '../assets/profile/rodrigo-profile.png'
-
+import { Linkedin, MessageCircle } from 'lucide-react'
 export default function Hero({ t }) {
   const tags = [
     'SQL',
@@ -56,20 +56,61 @@ export default function Hero({ t }) {
                 </a>
 
             <a
-              href="/cv-rodrigo-palacio.pdf"
-              download
-              className="rounded-full border border-white/20 bg-white/5 px-6 py-3 font-semibold text-white transition hover:-translate-y-0.5 hover:border-accent hover:bg-white/10"
-            >
-              {t.hero.secondary}
-            </a>
+                href="/cv-rodrigo-palacio.pdf"
+                download="CV_Rodrigo_Palacio.pdf"
+                className="
+                  rounded-full
+                  border border-cyan-300/30
+                  bg-gradient-to-r from-cyan-400 to-blue-500
+                  px-6 py-3
+                  font-semibold
+                  text-white
+                  shadow-lg shadow-cyan-500/25
+                  transition-all duration-300
+                  hover:-translate-y-1
+                  hover:shadow-cyan-400/40
+                "
+              >
+                {t.hero.secondary}
+              </a>
 
-            <a
-              href="https://www.linkedin.com/in/rodrigo-palacio-schunke-07438613a/"
-              target="_blank"
-              className="rounded-full border border-white/20 bg-white/5 px-6 py-3 font-semibold text-white transition hover:-translate-y-0.5 hover:border-accent hover:bg-white/10"
-            >
-              {t.hero.linkedin}
-            </a>
+              <a
+                href="https://www.linkedin.com/in/rodrigo-sebastian-palacio-schunke-07438613a/"
+                target="_blank"
+                rel="noreferrer"
+                className="
+                  flex h-12 w-12 items-center justify-center
+                  rounded-full
+                  bg-[#0A66C2]
+                  text-white
+                  shadow-lg shadow-blue-600/25
+                  transition-all duration-300
+                  hover:-translate-y-1
+                  hover:scale-105
+                  hover:bg-[#004182]
+                "
+              >
+                <Linkedin size={20} />
+              </a>
+
+              <a
+                href="https://wa.me/5493517868252"
+                target="_blank"
+                rel="noreferrer"
+                className="
+                  flex h-12 w-12 items-center justify-center
+                  rounded-full
+                  bg-[#25D366]
+                  text-white
+                  shadow-lg shadow-green-500/25
+                  transition-all duration-300
+                  hover:-translate-y-1
+                  hover:scale-105
+                  hover:bg-[#1ebe5d]
+                "
+              >
+                <MessageCircle size={20} />
+              </a>
           </div>
 
           <div className="mt-8 flex flex-wrap gap-2">
