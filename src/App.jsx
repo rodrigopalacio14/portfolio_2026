@@ -18,14 +18,14 @@ export default function App() {
   const t = content[lang]
 
   return (
-    <main>
+    <main className="min-h-screen bg-slate-950 text-white">
       <Navbar lang={lang} setLang={setLang} t={t} />
-      <Hero t={t} />
-      <ProfileAreas t={t} />
-      <Projects t={t} />
-      <Experience t={t} />
-      <Skills t={t} />
-      <Contact t={t} />
+      <Hero t={t} lang={lang} />
+      <ProfileAreas t={t} lang={lang} />
+      <Projects t={t} lang={lang} />
+      <Experience t={t} lang={lang} />
+      <Skills t={t} lang={lang} />
+      <Contact t={t} lang={lang} />
     </main>
   )
 }

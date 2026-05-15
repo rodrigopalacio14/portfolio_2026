@@ -1,47 +1,90 @@
 import { Mail } from 'lucide-react'
-import ContactForm from "./ContactForm"
+import ContactForm from './ContactForm'
 
-export default function Contact({ t }) {
+export default function Contact({ t, lang }) {
   return (
-    <section id="contact" className="py-20">
+    <section
+      id="contact"
+      className="bg-gradient-to-b from-slate-950 to-slate-900/90 py-24"
+    >
       <div className="section-container">
-        
-        <div className="rounded-3xl border border-white/10 bg-gradient-to-br from-teal-500/20 to-blue-500/20 p-8 text-center md:p-12">
-          
-          <h2 className="text-3xl font-bold text-white md:text-4xl">
-            {t.contactTitle}
-          </h2>
+        <div
+          className="
+            relative overflow-hidden
+            rounded-[36px]
+            border border-white/10
+            bg-gradient-to-br
+            from-cyan-500/15
+            via-slate-900
+            to-blue-500/10
+            p-8
+            shadow-[0_0_80px_rgba(6,182,212,0.08)]
+            md:p-12
+          "
+        >
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,#14b8a622,transparent_35%)]" />
 
-          <p className="mx-auto mt-4 max-w-2xl text-slate-300">
-            {t.contactText}
-          </p>
+          <div className="relative z-10 text-center">
+            <h2 className="text-3xl font-bold text-white md:text-5xl">
+              {t.contactTitle}
+            </h2>
 
-          <div className="mt-8 flex flex-wrap justify-center gap-3">
-            
-            <a
-              href="mailto:rodripalacio14@gmail.com"
-              className="inline-flex items-center gap-2 rounded-full bg-accent px-6 py-3 font-semibold text-slate-950"
-            >
-              <Mail size={18} />
-              Email
-            </a>
+            <p className="mx-auto mt-5 max-w-3xl text-lg leading-8 text-slate-300">
+              {t.contactText}
+            </p>
 
-            <a
-              href="https://www.linkedin.com/in/rodrigo-sebastian-palacio-schunke-07438613a/"
-              target="_blank"
-              className="inline-flex items-center gap-2 rounded-full border border-white/20 px-6 py-3 font-semibold text-white"
-            >
-              <span className="font-bold">in</span>
-              LinkedIn
-            </a>
+            <div className="mt-9 flex flex-wrap justify-center gap-4">
+              <a
+                href="mailto:rodripalacio14@gmail.com"
+                className="
+                  inline-flex items-center gap-2
+                  rounded-full
+                  bg-gradient-to-r
+                  from-cyan-400
+                  to-blue-500
+                  px-6 py-3
+                  font-semibold
+                  text-white
+                  shadow-lg shadow-cyan-500/25
+                  transition-all
+                  duration-300
+                  hover:-translate-y-1
+                  hover:shadow-cyan-400/40
+                "
+              >
+                <Mail size={18} />
+                {t.contactButtons.email}
+              </a>
 
+              <a
+                href="https://www.linkedin.com/in/rodrigo-sebastian-palacio-schunke-07438613a/"
+                target="_blank"
+                className="
+                  inline-flex items-center gap-2
+                  rounded-full
+                  border border-white/15
+                  bg-white/[0.06]
+                  px-6 py-3
+                  font-semibold
+                  text-white
+                  backdrop-blur-sm
+                  transition-all
+                  duration-300
+                  hover:-translate-y-1
+                  hover:border-cyan-400/30
+                  hover:bg-white/[0.09]
+                "
+              >
+                <span className="font-bold">in</span>
+                {t.contactButtons.linkedin}
+              </a>
+            </div>
+
+            <div className="mt-14">
+              <ContactForm t={t} lang={lang} />
+            </div>
           </div>
-
-          {/* FORMULARIO */}
-          <ContactForm />
-
         </div>
-
       </div>
     </section>
   )
