@@ -41,7 +41,12 @@ export const content = {
       subjectPlaceholder: "Consulta laboral / oportunidad",
       message: "Mensaje",
       messagePlaceholder: "Escribime tu mensaje...",
-      send: "Enviar mensaje"
+      send: "Enviar mensaje",
+      sending: "Enviando...",
+      success: "Mensaje enviado correctamente.",
+      error: "No se pudo enviar el mensaje. Podés contactarme por WhatsApp o LinkedIn.",
+      email: "Email",
+      emailPlaceholder: "email@empresa.com"
     }
   },
 
@@ -87,7 +92,12 @@ export const content = {
       subjectPlaceholder: "Job opportunity / inquiry",
       message: "Message",
       messagePlaceholder: "Write your message...",
-      send: "Send message"
+      send: "Send message",
+      sending: "Sending...",
+      success: "Message sent successfully.",
+      error: "The message could not be sent. You can contact me through WhatsApp or LinkedIn.",
+      email: "Email",
+      emailPlaceholder: "email@company.com"
     }
   }
 }
