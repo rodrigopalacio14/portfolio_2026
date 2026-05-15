@@ -6,16 +6,16 @@ export default function ContactForm({ t }) {
   const [message, setMessage] = useState('')
 
   const handleSubmit = e => {
-    e.preventDefault()
+  e.preventDefault()
 
-    const email = 'rodripalacio14@gmail.com'
+  const email = 'rodripalacio14@gmail.com'
 
-    const mailtoLink = `mailto:${email}?subject=${encodeURIComponent(
-      subject
-    )}&body=${encodeURIComponent(message)}`
+  const gmailUrl = `https://mail.google.com/mail/?view=cm&fs=1&to=${email}&su=${encodeURIComponent(
+    subject
+  )}&body=${encodeURIComponent(message)}`
 
-    window.location.href = mailtoLink
-  }
+  window.open(gmailUrl, '_blank')
+}
 
   return (
     <form

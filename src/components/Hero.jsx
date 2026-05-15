@@ -57,14 +57,14 @@ export default function Hero({ t }) {
 
             <a
               href="/cv-rodrigo-palacio.pdf"
-              target="_blank"
+              download
               className="rounded-full border border-white/20 bg-white/5 px-6 py-3 font-semibold text-white transition hover:-translate-y-0.5 hover:border-accent hover:bg-white/10"
             >
               {t.hero.secondary}
             </a>
 
             <a
-              href="https://www.linkedin.com/in/rodrigo-sebastian-palacio-schunke-07438613a/"
+              href="https://www.linkedin.com/in/rodrigo-palacio-schunke-07438613a/"
               target="_blank"
               className="rounded-full border border-white/20 bg-white/5 px-6 py-3 font-semibold text-white transition hover:-translate-y-0.5 hover:border-accent hover:bg-white/10"
             >

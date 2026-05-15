@@ -57,7 +57,7 @@ export default function Contact({ t, lang }) {
               </a>
 
               <a
-                href="https://www.linkedin.com/in/rodrigo-sebastian-palacio-schunke-07438613a/"
+                href="https://www.linkedin.com/in/rodrigo-palacio-schunke-07438613a/"
                 target="_blank"
                 className="
                   inline-flex items-center gap-2
@@ -77,6 +77,27 @@ export default function Contact({ t, lang }) {
               >
                 <span className="font-bold">in</span>
                 {t.contactButtons.linkedin}
+              </a>
+              <a
+                href="https://wa.me/5493517868252"
+                target="_blank"
+                className="
+                  inline-flex items-center gap-2
+                  rounded-full
+                  border border-white/15
+                  bg-white/[0.06]
+                  px-6 py-3
+                  font-semibold
+                  text-white
+                  backdrop-blur-sm
+                  transition-all
+                  duration-300
+                  hover:-translate-y-1
+                  hover:border-cyan-400/30
+                  hover:bg-white/[0.09]
+                "
+              >
+                WhatsApp
               </a>
             </div>
 
