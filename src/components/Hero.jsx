@@ -1,5 +1,5 @@
 import profileImg from '../assets/profile/rodrigo-profile.png'
-import { Linkedin, MessageCircle } from 'lucide-react'
+import {MessageCircle } from 'lucide-react'
 export default function Hero({ t }) {
   const tags = [
     'SQL',
@@ -90,7 +90,7 @@ export default function Hero({ t }) {
                   hover:bg-[#004182]
                 "
               >
-                <Linkedin size={20} />
+                <span className="text-lg font-bold">in</span>
               </a>
 
               <a
