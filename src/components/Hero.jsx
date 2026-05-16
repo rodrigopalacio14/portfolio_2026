@@ -1,6 +1,6 @@
 import profileImg from '../assets/profile/rodrigo-profile.png'
-import {MessageCircle } from 'lucide-react'
-export default function Hero({ t }) {
+import { Download, MessageCircle } from 'lucide-react'
+export default function Hero({ t, lang }) {
   const tags = [
     'SQL',
     'Power BI',
@@ -56,23 +56,29 @@ export default function Hero({ t }) {
                 </a>
 
             <a
-                href="/cv-rodrigo-palacio.pdf"
-                download="CV_Rodrigo_Palacio.pdf"
-                className="
-                  rounded-full
-                  border border-cyan-300/30
-                  bg-gradient-to-r from-cyan-400 to-blue-500
-                  px-6 py-3
-                  font-semibold
-                  text-white
-                  shadow-lg shadow-cyan-500/25
-                  transition-all duration-300
-                  hover:-translate-y-1
-                  hover:shadow-cyan-400/40
-                "
-              >
-                {t.hero.secondary}
-              </a>
+              href={
+                lang === 'es'
+                  ? '/cv-rodrigo-palacio.pdf'
+                  : '/cv-rodrigo-palacio-en.pdf'
+              }
+              download
+              className="
+                inline-flex items-center gap-2
+                rounded-full
+                border border-cyan-300/30
+                bg-gradient-to-r from-cyan-400 to-blue-500
+                px-6 py-3
+                font-semibold
+                text-white
+                shadow-lg shadow-cyan-500/25
+                transition-all duration-300
+                hover:-translate-y-1
+                hover:shadow-cyan-400/40
+              "
+            >
+              <Download size={18} />
+              {t.hero.secondary}
+            </a>
 
               <a
                 href="https://www.linkedin.com/in/rodrigo-sebastian-palacio-schunke-07438613a/"

@@ -13,7 +13,7 @@ export const content = {
       description:
         "Profesional de sistemas orientado a Business Intelligence, análisis de datos, automatización de reporting e implementación ERP. Combino experiencia en datos y procesos con base técnica en SQL, C#, .NET y tecnologías web.",
       primary: "Ver casos",
-      secondary: "Descargar CV",
+      secondary: "Currículum",
       linkedin: "LinkedIn",
       sideEyebrow: "Perfil híbrido",
       sideTitle: "Data + Business + Systems",
@@ -64,7 +64,7 @@ export const content = {
       description:
         "Systems professional focused on Business Intelligence, data analytics, reporting automation and ERP implementation. I combine experience in data and business processes with technical foundations in SQL, C#, .NET and web technologies.",
       primary: "View cases",
-      secondary: "Download CV",
+      secondary: "Resume",
       linkedin: "LinkedIn",
       sideEyebrow: "Hybrid profile",
       sideTitle: "Data + Business + Systems",
