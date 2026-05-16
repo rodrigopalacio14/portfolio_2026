@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react'
+import { Analytics } from '@vercel/analytics/react'
 import { content } from './data/content'
 import Navbar from './components/Navbar'
 import Hero from './components/Hero'
@@ -26,6 +27,7 @@ export default function App() {
       <Experience t={t} lang={lang} />
       <Skills t={t} lang={lang} />
       <Contact t={t} lang={lang} />
+      <Analytics />
     </main>
   )
 }
