@@ -73,12 +73,23 @@ export default function Navbar({ lang, setLang, t }) {
 
         <div className="flex items-center gap-2">
           <button
-            onClick={() => setLang(lang === 'es' ? 'en' : 'es')}
-            className="flex items-center gap-2 rounded-full border border-white/15 px-4 py-2 text-sm text-white transition hover:border-accent hover:text-accent"
-          >
-            <Globe size={16} />
-            {lang === 'es' ? 'EN' : 'ES'}
-          </button>
+              onClick={() => setLang(lang === 'es' ? 'en' : 'es')}
+              className="
+                flex items-center gap-2
+                rounded-full
+                bg-gradient-to-r from-cyan-400 to-blue-500
+                px-4 py-2
+                text-sm font-semibold
+                text-white
+                shadow-lg shadow-cyan-500/25
+                transition-all duration-300
+                hover:-translate-y-1
+                hover:shadow-cyan-400/40
+              "
+            >
+              <Globe size={16} />
+              {lang === 'es' ? 'EN' : 'ES'}
+            </button>
 
           <button
             onClick={() => setIsOpen(!isOpen)}
