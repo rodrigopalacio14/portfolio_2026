@@ -9,36 +9,39 @@ export const content = {
       contact: "Contacto"
     },
     hero: {
-      eyebrow: "Data • BI • Software • Systems",
-      title: "Conecto datos, sistemas y desarrollo para construir soluciones que resuelven problemas reales.",
+      eyebrow: "Systems · Data · Software",
+      name: "Rodrigo Palacio",
+      title: "Construyo soluciones conectando datos, sistemas y desarrollo.",
       description:
-        "Profesional de Sistemas con más de 4 años de experiencia en Data Analytics y Business Intelligence. Complemento ese recorrido con desarrollo de software, implementación ERP, bases de datos, APIs y automatización de procesos.",
+        "Profesional de Sistemas con más de 4 años de experiencia en Data & BI, complementada con desarrollo de software, ERP, bases de datos, APIs y automatización.",
       primary: "Ver proyectos",
       secondary: "Currículum",
       linkedin: "LinkedIn",
       whatsapp: "WhatsApp",
-      sideEyebrow: "Perfil híbrido",
-      sideTitle: "Systems, Data & Software",
-      sideText:
-        "Un perfil de Sistemas orientado a entender negocio, modelar datos, construir aplicaciones e integrar procesos de punta a punta.",
-      sideCards: ["Data & BI", "Software Development", "Systems & ERP", "Automation & APIs"],
-      tags: ["Power BI", "SQL", "Azure Databricks", "Oracle", "C#/.NET", "React", "Supabase", "APIs"]
+      location: "Córdoba, Argentina",
+      availability: "Available for remote / hybrid roles",
+      evidence: "SQL · Power BI · Databricks · Oracle · C# · React · Supabase"
     },
-    areasTitle: "Perfil profesional",
+    areasTitle: "Lo que hago",
     areasSubtitle:
-      "Un perfil de Sistemas con especialización fuerte en datos, BI y soluciones prácticas de software, ERP e integración.",
+      "Trabajo desde la consulta SQL y el modelo de datos hasta el dashboard, la integración o la aplicación que usa el usuario.",
     projectsTitle: "Proyectos destacados",
     projectsSubtitle:
-      "Soluciones aplicadas a problemas de negocio reales, combinando análisis, desarrollo, automatización y sistemas.",
+      "Una selección corta para ver rápido qué construí, con qué tecnologías y qué parte resolví personalmente.",
     projectLabels: {
       all: "Todos",
-      problem: "Problema:",
-      solution: "Solución:",
-      result: "Resultado:",
-      viewImage: "Ampliar",
+      contribution: "Mi trabajo",
+      impact: "Impacto",
+      technologies: "Tecnologías",
+      implementations: "Implementaciones",
+      viewImage: "Ampliar imagen",
+      viewMore: "Ver más proyectos",
+      viewLess: "Ver menos proyectos",
       demo: "Ver demo",
       site: "Ver sitio",
-      github: "Ver GitHub"
+      github: "Ver GitHub",
+      pendingUrl: "URL pendiente",
+      pendingImage: "Screenshot pendiente"
     },
     projectFilters: [
       { id: "all", label: "Todos" },
@@ -47,14 +50,43 @@ export const content = {
       { id: "automation", label: "Automation & APIs" },
       { id: "systems", label: "Systems" }
     ],
+    architecture: {
+      title: "Arquitectura de la plataforma",
+      subtitle:
+        "La base reutilizable de Níspero Tech separa experiencia comercial, datos, configuración y módulos de negocio para adaptarse a distintos clientes.",
+      nodes: {
+        users: "Usuarios / Clientes",
+        frontend: "Frontend",
+        frontendItems: ["React", "JavaScript", "Responsive UI"],
+        dataLayer: "Data & Services Layer",
+        auth: "Authentication",
+        authItems: ["Supabase Auth"],
+        database: "Database",
+        databaseItems: ["PostgreSQL"],
+        storage: "Storage",
+        storageItems: ["Images / Media"],
+        modules: "Business Modules",
+        modulesItems: ["Products", "Catalog", "Sales", "Stock", "Customers", "Configuration"],
+        integrations: "Integrations",
+        integrationsItems: ["REST APIs", "JSON", "External services"],
+        deployment: "Deployment",
+        deploymentItems: ["Vercel", "Cloud infrastructure"],
+        businesses: "Multiple Businesses",
+        businessesItems: ["Killa Joyas", "Puerto Pizza", "Otros clientes"]
+      }
+    },
     experienceTitle: "Experiencia profesional",
+    experienceSubtitle:
+      "Una trayectoria de Sistemas atravesada por datos, procesos administrativos, BI, ERP y construcción de soluciones.",
     stackTitle: "Stack técnico",
-    workTitle: "Cómo trabajo",
+    stackSubtitle:
+      "Tecnologías que uso para analizar información, construir aplicaciones, trabajar con bases de datos e integrar sistemas.",
+    workTitle: "Cómo construyo una solución",
     workSubtitle:
-      "Mi enfoque parte del problema de negocio y termina en una solución medible, útil y mantenible.",
-    contactTitle: "¿Buscás un perfil que conecte datos, negocio y tecnología?",
+      "Mi trabajo suele empezar entendiendo el proceso antes de elegir la tecnología.",
+    contactTitle: "¿Buscás un perfil que conecte datos, sistemas y desarrollo?",
     contactText:
-      "Estoy abierto a oportunidades en Data Analytics, BI, Business Analysis, Functional Analysis, ERP, automatización, integraciones y desarrollo junior de soluciones.",
+      "Estoy abierto a oportunidades en Data Analytics, BI, Business Analysis, Functional Analysis, ERP, automatización, integraciones y desarrollo de soluciones.",
     contactButtons: {
       email: "Email",
       linkedin: "LinkedIn",
@@ -84,36 +116,39 @@ export const content = {
       contact: "Contact"
     },
     hero: {
-      eyebrow: "Data • BI • Software • Systems",
-      title: "I connect data, systems and development to build solutions that solve real problems.",
+      eyebrow: "Systems · Data · Software",
+      name: "Rodrigo Palacio",
+      title: "I build solutions by connecting data, systems and software.",
       description:
-        "Systems professional with 4+ years of experience in Data Analytics and Business Intelligence. I complement that background with software development, ERP implementation, databases, APIs and process automation.",
+        "Systems professional with 4+ years of Data & BI experience, complemented by software development, ERP, databases, APIs and automation.",
       primary: "View projects",
       secondary: "Resume",
       linkedin: "LinkedIn",
       whatsapp: "WhatsApp",
-      sideEyebrow: "Hybrid profile",
-      sideTitle: "Systems, Data & Software",
-      sideText:
-        "A Systems profile focused on understanding business, modeling data, building applications and integrating end-to-end processes.",
-      sideCards: ["Data & BI", "Software Development", "Systems & ERP", "Automation & APIs"],
-      tags: ["Power BI", "SQL", "Azure Databricks", "Oracle", "C#/.NET", "React", "Supabase", "APIs"]
+      location: "Córdoba, Argentina",
+      availability: "Available for remote / hybrid roles",
+      evidence: "SQL · Power BI · Databricks · Oracle · C# · React · Supabase"
     },
-    areasTitle: "Professional profile",
+    areasTitle: "What I Do",
     areasSubtitle:
-      "A Systems profile with a strong specialization in data, BI and practical software, ERP and integration solutions.",
+      "I work from the SQL query and data model to the dashboard, integration or application used by the end user.",
     projectsTitle: "Featured projects",
     projectsSubtitle:
-      "Solutions applied to real business problems, combining analytics, development, automation and systems.",
+      "A short selection to quickly understand what I built, which technologies I used and what I personally solved.",
     projectLabels: {
       all: "All",
-      problem: "Problem:",
-      solution: "Solution:",
-      result: "Result:",
-      viewImage: "View",
+      contribution: "My work",
+      impact: "Impact",
+      technologies: "Technologies",
+      implementations: "Implementations",
+      viewImage: "View image",
+      viewMore: "View more projects",
+      viewLess: "View fewer projects",
       demo: "View demo",
       site: "View site",
-      github: "View GitHub"
+      github: "View GitHub",
+      pendingUrl: "URL pending",
+      pendingImage: "Screenshot pending"
     },
     projectFilters: [
       { id: "all", label: "All" },
@@ -122,14 +157,43 @@ export const content = {
       { id: "automation", label: "Automation & APIs" },
       { id: "systems", label: "Systems" }
     ],
+    architecture: {
+      title: "Platform architecture",
+      subtitle:
+        "Níspero Tech's reusable base separates the commercial experience, data, configuration and business modules so it can adapt to different clients.",
+      nodes: {
+        users: "Users / Clients",
+        frontend: "Frontend",
+        frontendItems: ["React", "JavaScript", "Responsive UI"],
+        dataLayer: "Data & Services Layer",
+        auth: "Authentication",
+        authItems: ["Supabase Auth"],
+        database: "Database",
+        databaseItems: ["PostgreSQL"],
+        storage: "Storage",
+        storageItems: ["Images / Media"],
+        modules: "Business Modules",
+        modulesItems: ["Products", "Catalog", "Sales", "Stock", "Customers", "Configuration"],
+        integrations: "Integrations",
+        integrationsItems: ["REST APIs", "JSON", "External services"],
+        deployment: "Deployment",
+        deploymentItems: ["Vercel", "Cloud infrastructure"],
+        businesses: "Multiple Businesses",
+        businessesItems: ["Killa Joyas", "Puerto Pizza", "Other clients"]
+      }
+    },
     experienceTitle: "Professional experience",
+    experienceSubtitle:
+      "A Systems career shaped by data, administrative processes, BI, ERP and practical solution building.",
     stackTitle: "Technical stack",
-    workTitle: "How I Work",
+    stackSubtitle:
+      "Technologies I use to analyze information, build applications, work with databases and integrate systems.",
+    workTitle: "How I Build a Solution",
     workSubtitle:
-      "My approach starts with the business problem and ends with a useful, measurable and maintainable solution.",
-    contactTitle: "Looking for someone who connects data, business and technology?",
+      "My work usually starts by understanding the process before choosing the technology.",
+    contactTitle: "Looking for someone who connects data, systems and development?",
     contactText:
-      "Open to opportunities in Data Analytics, BI, Business Analysis, Functional Analysis, ERP, automation, integrations and junior solution development.",
+      "Open to opportunities in Data Analytics, BI, Business Analysis, Functional Analysis, ERP, automation, integrations and solution development.",
     contactButtons: {
       email: "Email",
       linkedin: "LinkedIn",
@@ -153,19 +217,19 @@ export const content = {
 export const areas = {
   es: [
     {
-      title: "Data Analytics & BI",
+      title: "Data & BI",
       description:
-        "Más de 4 años trabajando con SQL, Power BI, Looker, Azure Databricks, KPIs, reporting, modelado analítico y automatización."
+        "Más de 4 años trabajando con SQL, Power BI, Looker, Azure Databricks, modelado analítico, KPIs y automatización de reporting."
     },
     {
       title: "Software Development",
       description:
-        "Experiencia desarrollando soluciones con C#, .NET, WinForms, React, JavaScript, Supabase y PostgreSQL."
+        "Desarrollo de aplicaciones y soluciones con C#, .NET, React, JavaScript, Supabase y PostgreSQL."
     },
     {
       title: "Systems & ERP",
       description:
-        "Implementación funcional, análisis de procesos, soporte, Oracle/PLSQL, resolución de incidentes y sistemas empresariales."
+        "Implementación de sistemas, análisis funcional, Oracle/PLSQL, troubleshooting y procesos administrativos y operativos."
     },
     {
       title: "Automation & Integrations",
@@ -176,19 +240,19 @@ export const areas = {
 
   en: [
     {
-      title: "Data Analytics & BI",
+      title: "Data & BI",
       description:
-        "4+ years working with SQL, Power BI, Looker, Azure Databricks, KPIs, reporting, analytical modeling and automation."
+        "4+ years working with SQL, Power BI, Looker, Azure Databricks, analytical modeling, KPIs and reporting automation."
     },
     {
       title: "Software Development",
       description:
-        "Experience developing solutions with C#, .NET, WinForms, React, JavaScript, Supabase and PostgreSQL."
+        "Application and solution development with C#, .NET, React, JavaScript, Supabase and PostgreSQL."
     },
     {
       title: "Systems & ERP",
       description:
-        "Functional implementation, process analysis, support, Oracle/PLSQL, incident resolution and enterprise systems."
+        "Systems implementation, functional analysis, Oracle/PLSQL, troubleshooting and administrative and operational processes."
     },
     {
       title: "Automation & Integrations",
@@ -200,32 +264,32 @@ export const areas = {
 
 export const skillGroups = {
   es: [
-    { title: "Data & BI", items: ["Power BI", "DAX", "SQL", "Looker", "Azure Databricks", "Excel", "Python", "ETL", "Data Modeling"] },
-    { title: "Development", items: ["C#", ".NET", "WinForms", "React", "JavaScript", "HTML", "CSS", "Bootstrap"] },
-    { title: "Databases & Cloud", items: ["Oracle", "PL/SQL", "PostgreSQL", "Supabase", "Dataverse", "Azure", "SQL Server"] },
-    { title: "Integrations & Tools", items: ["REST APIs", "JSON", "Power Automate", "Git", "GitHub", "Postman", "Vercel", "Jira"] }
+    { title: "DATA & BI", items: ["Power BI", "SQL", "DAX", "Looker", "Azure Databricks", "Python", "ETL", "Data Modeling"] },
+    { title: "DEVELOPMENT", items: ["C#", ".NET", "WinForms", "React", "JavaScript", "Bootstrap"] },
+    { title: "DATABASES", items: ["Oracle", "PL/SQL", "PostgreSQL", "Supabase", "SQL Server", "Dataverse"] },
+    { title: "TOOLS & INTEGRATIONS", items: ["REST APIs", "JSON", "Power Automate", "Git", "Postman", "Jira", "Vercel"] }
   ],
 
   en: [
-    { title: "Data & BI", items: ["Power BI", "DAX", "SQL", "Looker", "Azure Databricks", "Excel", "Python", "ETL", "Data Modeling"] },
-    { title: "Development", items: ["C#", ".NET", "WinForms", "React", "JavaScript", "HTML", "CSS", "Bootstrap"] },
-    { title: "Databases & Cloud", items: ["Oracle", "PL/SQL", "PostgreSQL", "Supabase", "Dataverse", "Azure", "SQL Server"] },
-    { title: "Integrations & Tools", items: ["REST APIs", "JSON", "Power Automate", "Git", "GitHub", "Postman", "Vercel", "Jira"] }
+    { title: "DATA & BI", items: ["Power BI", "SQL", "DAX", "Looker", "Azure Databricks", "Python", "ETL", "Data Modeling"] },
+    { title: "DEVELOPMENT", items: ["C#", ".NET", "WinForms", "React", "JavaScript", "Bootstrap"] },
+    { title: "DATABASES", items: ["Oracle", "PL/SQL", "PostgreSQL", "Supabase", "SQL Server", "Dataverse"] },
+    { title: "TOOLS & INTEGRATIONS", items: ["REST APIs", "JSON", "Power Automate", "Git", "Postman", "Jira", "Vercel"] }
   ]
 }
 
 export const workSteps = {
   es: [
-    { title: "Entender el problema", description: "Alinear objetivo, usuarios, restricciones y criterios de exito antes de proponer una solucion." },
-    { title: "Analizar datos y procesos", description: "Revisar fuentes, reglas de negocio, circuitos operativos y puntos de friccion." },
-    { title: "Construir la solucion", description: "Diseñar modelos, dashboards, aplicaciones o integraciones con foco en uso real." },
-    { title: "Medir y mejorar", description: "Validar resultados, ajustar reglas y dejar procesos mas claros, trazables y mantenibles." }
+    { title: "Entender", description: "Proceso, usuarios, restricciones y datos disponibles." },
+    { title: "Diseñar", description: "Modelo, flujo, interfaz o integración antes de construir." },
+    { title: "Construir", description: "Dashboard, aplicación, consulta, API o automatización." },
+    { title: "Medir y mejorar", description: "Validación con uso real, ajustes y mantenimiento." }
   ],
 
   en: [
-    { title: "Understand the problem", description: "Align goals, users, constraints and success criteria before proposing a solution." },
-    { title: "Analyze the data/process", description: "Review sources, business rules, operational flows and friction points." },
-    { title: "Build the solution", description: "Design models, dashboards, applications or integrations with real usage in mind." },
-    { title: "Measure and improve", description: "Validate results, tune rules and leave processes clearer, traceable and maintainable." }
+    { title: "Understand", description: "Process, users, constraints and available data." },
+    { title: "Design", description: "Model, flow, interface or integration before building." },
+    { title: "Build", description: "Dashboard, application, query, API or automation." },
+    { title: "Measure", description: "Real-use validation, adjustments and maintenance." }
   ]
 }

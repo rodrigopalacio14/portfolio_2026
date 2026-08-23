@@ -33,7 +33,7 @@ export default function ContactForm({ t }) {
   return (
     <form
       onSubmit={handleSubmit}
-      className="mx-auto max-w-2xl rounded-[30px] border border-white/10 bg-white/[0.05] p-7 text-left shadow-2xl backdrop-blur-sm"
+      className="border border-white/10 bg-white/[0.04] p-6 text-left md:p-7"
     >
       <div>
         <label className="block text-sm font-medium text-slate-200">
@@ -45,7 +45,7 @@ export default function ContactForm({ t }) {
           type="text"
           placeholder={t.form.subjectPlaceholder}
           required
-          className="mt-3 w-full rounded-2xl border border-white/10 bg-slate-900/70 px-5 py-4 text-white outline-none placeholder:text-slate-500 focus:border-cyan-400/40"
+          className="mt-3 w-full border border-white/10 bg-slate-900 px-5 py-4 text-white outline-none placeholder:text-slate-500 focus:border-cyan-300 focus:ring-2 focus:ring-cyan-300/20"
         />
       </div>
 
@@ -59,7 +59,7 @@ export default function ContactForm({ t }) {
           type="email"
           placeholder={t.form.emailPlaceholder}
           required
-          className="mt-3 w-full rounded-2xl border border-white/10 bg-slate-900/70 px-5 py-4 text-white outline-none placeholder:text-slate-500 focus:border-cyan-400/40"
+          className="mt-3 w-full border border-white/10 bg-slate-900 px-5 py-4 text-white outline-none placeholder:text-slate-500 focus:border-cyan-300 focus:ring-2 focus:ring-cyan-300/20"
         />
       </div>
 
@@ -73,7 +73,7 @@ export default function ContactForm({ t }) {
           placeholder={t.form.messagePlaceholder}
           rows="6"
           required
-          className="mt-3 w-full resize-none rounded-2xl border border-white/10 bg-slate-900/70 px-5 py-4 text-white outline-none placeholder:text-slate-500 focus:border-cyan-400/40"
+          className="mt-3 w-full resize-none border border-white/10 bg-slate-900 px-5 py-4 text-white outline-none placeholder:text-slate-500 focus:border-cyan-300 focus:ring-2 focus:ring-cyan-300/20"
         />
       </div>
 
@@ -81,7 +81,7 @@ export default function ContactForm({ t }) {
         <button
           type="submit"
           disabled={status === 'sending'}
-          className="inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-cyan-400 to-blue-500 px-6 py-3 font-semibold text-white shadow-lg shadow-cyan-500/25 transition-all duration-300 hover:-translate-y-1 disabled:opacity-60"
+          className="inline-flex items-center gap-2 bg-cyan-500 px-6 py-3 font-semibold text-slate-950 transition hover:bg-cyan-300 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-cyan-300 disabled:opacity-60"
         >
           <Mail size={16} />
           {status === 'sending' ? t.form.sending : t.form.send}
@@ -89,13 +89,13 @@ export default function ContactForm({ t }) {
       </div>
 
       {status === 'success' && (
-        <p className="mt-5 rounded-2xl border border-green-400/20 bg-green-400/10 p-4 text-sm text-green-300">
+        <p className="mt-5 border border-green-400/20 bg-green-400/10 p-4 text-sm text-green-300">
           {t.form.success}
         </p>
       )}
 
       {status === 'error' && (
-        <p className="mt-5 rounded-2xl border border-red-400/20 bg-red-400/10 p-4 text-sm text-red-300">
+        <p className="mt-5 border border-red-400/20 bg-red-400/10 p-4 text-sm text-red-300">
           {t.form.error}
         </p>
       )}
