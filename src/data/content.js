@@ -8,10 +8,14 @@ export const content = {
       work: "Cómo trabajo",
       contact: "Contacto"
     },
+    common: {
+      close: "Cerrar"
+    },
     hero: {
-      eyebrow: "Systems · Data · Software",
+      eyebrow: "Sistemas · Datos · Software",
       name: "Rodrigo Palacio",
       title: "Construyo soluciones conectando datos, sistemas y desarrollo.",
+      titleLines: ["Construyo", "soluciones", "conectando datos,", "sistemas y", "desarrollo."],
       description:
         "Profesional de Sistemas con más de 4 años de experiencia en Data & BI, complementada con desarrollo de software, ERP, bases de datos, APIs y automatización.",
       primary: "Ver proyectos",
@@ -19,7 +23,7 @@ export const content = {
       linkedin: "LinkedIn",
       whatsapp: "WhatsApp",
       location: "Córdoba, Argentina",
-      availability: "Available for remote / hybrid roles",
+      availability: "Disponible para oportunidades remotas e híbridas",
       evidence: "SQL · Power BI · Databricks · Oracle · C# · React · Supabase"
     },
     areasTitle: "Lo que hago",
@@ -27,53 +31,41 @@ export const content = {
       "Trabajo desde la consulta SQL y el modelo de datos hasta el dashboard, la integración o la aplicación que usa el usuario.",
     projectsTitle: "Proyectos destacados",
     projectsSubtitle:
-      "Una selección corta para ver rápido qué construí, con qué tecnologías y qué parte resolví personalmente.",
+      "Una selección corta para ver rápido qué construí, qué tecnologías usé y qué parte resolví personalmente.",
     projectLabels: {
-      all: "Todos",
-      contribution: "Mi trabajo",
-      impact: "Impacto",
+      contribution: "Mi aporte",
+      impact: "Resultado",
       technologies: "Tecnologías",
-      implementations: "Implementaciones",
+      implementations: "Implementaciones reales",
       viewImage: "Ampliar imagen",
       viewMore: "Ver más proyectos",
       viewLess: "Ver menos proyectos",
       demo: "Ver demo",
       site: "Ver sitio",
       github: "Ver GitHub",
-      pendingUrl: "URL pendiente",
-      pendingImage: "Screenshot pendiente"
+      viewNispero: "Ver Níspero Tech",
+      builtTitle: "Qué construí"
     },
     projectFilters: [
       { id: "all", label: "Todos" },
       { id: "data", label: "Data & BI" },
-      { id: "development", label: "Development" },
-      { id: "automation", label: "Automation & APIs" },
-      { id: "systems", label: "Systems" }
+      { id: "development", label: "Desarrollo" },
+      { id: "automation", label: "Automatización & APIs" },
+      { id: "systems", label: "Sistemas" }
     ],
     architecture: {
       title: "Arquitectura de la plataforma",
       subtitle:
-        "La base reutilizable de Níspero Tech separa experiencia comercial, datos, configuración y módulos de negocio para adaptarse a distintos clientes.",
-      nodes: {
-        users: "Usuarios / Clientes",
-        frontend: "Frontend",
-        frontendItems: ["React", "JavaScript", "Responsive UI"],
-        dataLayer: "Data & Services Layer",
-        auth: "Authentication",
-        authItems: ["Supabase Auth"],
-        database: "Database",
-        databaseItems: ["PostgreSQL"],
-        storage: "Storage",
-        storageItems: ["Images / Media"],
-        modules: "Business Modules",
-        modulesItems: ["Products", "Catalog", "Sales", "Stock", "Customers", "Configuration"],
-        integrations: "Integrations",
-        integrationsItems: ["REST APIs", "JSON", "External services"],
-        deployment: "Deployment",
-        deploymentItems: ["Vercel", "Cloud infrastructure"],
-        businesses: "Multiple Businesses",
-        businessesItems: ["Killa Joyas", "Puerto Pizza", "Otros clientes"]
-      }
+        "Un esquema simple de cómo se organiza la base común de Níspero Tech.",
+      implementationsLabel: "Implementaciones",
+      layers: [
+        { label: "USUARIO", detail: "Clientes y administradores" },
+        { label: "FRONTEND", detail: "React · JavaScript" },
+        { label: "DATOS & SERVICIOS", detail: "Supabase Auth · PostgreSQL · Storage" },
+        { label: "NEGOCIO & INTEGRACIONES", detail: "Productos · Catálogo · Ventas · Stock · REST APIs · JSON" },
+        { label: "DESPLIEGUE", detail: "Vercel" }
+      ],
+      implementations: "Killa Joyas · Puerto Pizza"
     },
     experienceTitle: "Experiencia profesional",
     experienceSubtitle:
@@ -115,10 +107,14 @@ export const content = {
       work: "How I Work",
       contact: "Contact"
     },
+    common: {
+      close: "Close"
+    },
     hero: {
       eyebrow: "Systems · Data · Software",
       name: "Rodrigo Palacio",
       title: "I build solutions by connecting data, systems and software.",
+      titleLines: ["I build", "solutions", "by connecting data,", "systems and", "software."],
       description:
         "Systems professional with 4+ years of Data & BI experience, complemented by software development, ERP, databases, APIs and automation.",
       primary: "View projects",
@@ -126,7 +122,7 @@ export const content = {
       linkedin: "LinkedIn",
       whatsapp: "WhatsApp",
       location: "Córdoba, Argentina",
-      availability: "Available for remote / hybrid roles",
+      availability: "Available for remote and hybrid opportunities",
       evidence: "SQL · Power BI · Databricks · Oracle · C# · React · Supabase"
     },
     areasTitle: "What I Do",
@@ -136,19 +132,18 @@ export const content = {
     projectsSubtitle:
       "A short selection to quickly understand what I built, which technologies I used and what I personally solved.",
     projectLabels: {
-      all: "All",
       contribution: "My work",
-      impact: "Impact",
+      impact: "Result",
       technologies: "Technologies",
-      implementations: "Implementations",
+      implementations: "Real implementations",
       viewImage: "View image",
       viewMore: "View more projects",
       viewLess: "View fewer projects",
       demo: "View demo",
       site: "View site",
       github: "View GitHub",
-      pendingUrl: "URL pending",
-      pendingImage: "Screenshot pending"
+      viewNispero: "View Níspero Tech",
+      builtTitle: "What I built"
     },
     projectFilters: [
       { id: "all", label: "All" },
@@ -160,27 +155,16 @@ export const content = {
     architecture: {
       title: "Platform architecture",
       subtitle:
-        "Níspero Tech's reusable base separates the commercial experience, data, configuration and business modules so it can adapt to different clients.",
-      nodes: {
-        users: "Users / Clients",
-        frontend: "Frontend",
-        frontendItems: ["React", "JavaScript", "Responsive UI"],
-        dataLayer: "Data & Services Layer",
-        auth: "Authentication",
-        authItems: ["Supabase Auth"],
-        database: "Database",
-        databaseItems: ["PostgreSQL"],
-        storage: "Storage",
-        storageItems: ["Images / Media"],
-        modules: "Business Modules",
-        modulesItems: ["Products", "Catalog", "Sales", "Stock", "Customers", "Configuration"],
-        integrations: "Integrations",
-        integrationsItems: ["REST APIs", "JSON", "External services"],
-        deployment: "Deployment",
-        deploymentItems: ["Vercel", "Cloud infrastructure"],
-        businesses: "Multiple Businesses",
-        businessesItems: ["Killa Joyas", "Puerto Pizza", "Other clients"]
-      }
+        "A simple view of how Níspero Tech's shared foundation is organized.",
+      implementationsLabel: "Implementations",
+      layers: [
+        { label: "USER", detail: "Customers and administrators" },
+        { label: "FRONTEND", detail: "React · JavaScript" },
+        { label: "BACKEND & DATA", detail: "Supabase Auth · PostgreSQL · Storage" },
+        { label: "BUSINESS & INTEGRATIONS", detail: "Products · Catalog · Sales · Stock · REST APIs · JSON" },
+        { label: "DEPLOY", detail: "Vercel" }
+      ],
+      implementations: "Killa Joyas · Puerto Pizza"
     },
     experienceTitle: "Professional experience",
     experienceSubtitle:
@@ -222,19 +206,19 @@ export const areas = {
         "Más de 4 años trabajando con SQL, Power BI, Looker, Azure Databricks, modelado analítico, KPIs y automatización de reporting."
     },
     {
-      title: "Software Development",
+      title: "Desarrollo de software",
       description:
         "Desarrollo de aplicaciones y soluciones con C#, .NET, React, JavaScript, Supabase y PostgreSQL."
     },
     {
-      title: "Systems & ERP",
+      title: "Sistemas & ERP",
       description:
         "Implementación de sistemas, análisis funcional, Oracle/PLSQL, troubleshooting y procesos administrativos y operativos."
     },
     {
-      title: "Automation & Integrations",
+      title: "Automatización e integraciones",
       description:
-        "APIs REST, JSON, Power Automate, integraciones entre sistemas y automatización de procesos."
+        "APIs REST, JSON, Power Automate, integraciones entre sistemas y automatización de tareas."
     }
   ],
 
@@ -257,7 +241,7 @@ export const areas = {
     {
       title: "Automation & Integrations",
       description:
-        "REST APIs, JSON, Power Automate, system integrations and process automation."
+        "REST APIs, JSON, Power Automate, system integrations and task automation."
     }
   ]
 }
@@ -265,9 +249,9 @@ export const areas = {
 export const skillGroups = {
   es: [
     { title: "DATA & BI", items: ["Power BI", "SQL", "DAX", "Looker", "Azure Databricks", "Python", "ETL", "Data Modeling"] },
-    { title: "DEVELOPMENT", items: ["C#", ".NET", "WinForms", "React", "JavaScript", "Bootstrap"] },
-    { title: "DATABASES", items: ["Oracle", "PL/SQL", "PostgreSQL", "Supabase", "SQL Server", "Dataverse"] },
-    { title: "TOOLS & INTEGRATIONS", items: ["REST APIs", "JSON", "Power Automate", "Git", "Postman", "Jira", "Vercel"] }
+    { title: "DESARROLLO", items: ["C#", ".NET", "WinForms", "React", "JavaScript", "Bootstrap"] },
+    { title: "BASES DE DATOS", items: ["Oracle", "PL/SQL", "PostgreSQL", "Supabase", "SQL Server", "Dataverse"] },
+    { title: "HERRAMIENTAS & INTEGRACIONES", items: ["REST APIs", "JSON", "Power Automate", "Git", "Postman", "Jira", "Vercel"] }
   ],
 
   en: [

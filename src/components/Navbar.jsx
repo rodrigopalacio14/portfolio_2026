@@ -53,7 +53,7 @@ export default function Navbar({ lang, setLang, t }) {
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50 border-b border-white/10 bg-slate-950/80 backdrop-blur-xl">
-      <nav className="section-container flex h-16 items-center justify-between">
+      <nav className="section-container site-nav flex h-16 items-center justify-between">
         <a
           href="#home"
           onClick={handleNavigate}
@@ -72,7 +72,7 @@ export default function Navbar({ lang, setLang, t }) {
           ))}
         </div>
 
-        <div className="flex items-center gap-2">
+        <div className="nav-controls flex shrink-0 items-center gap-2">
           <button
               onClick={() => setLang(lang === 'es' ? 'en' : 'es')}
               className="flex items-center gap-2 border border-cyan-300/40 px-4 py-2 text-sm font-semibold text-cyan-100 transition hover:border-cyan-200 hover:bg-white/5 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-cyan-300"

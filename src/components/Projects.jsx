@@ -1,23 +1,11 @@
 import { ExternalLink, Image as ImageIcon } from 'lucide-react'
 import { useMemo, useState } from 'react'
 import { projects } from '../data/projects'
-import SystemArchitecture from './SystemArchitecture'
+import FeaturedProject from './FeaturedProject'
 
 function ProjectVisual({ project, t, onOpen }) {
   if (!project.image) {
-    return (
-      <div className="project-visual-placeholder">
-        <p className="text-sm font-semibold uppercase tracking-[0.18em] text-cyan-700">
-          {project.categoryLabel}
-        </p>
-        <p className="mt-6 max-w-sm text-3xl font-bold leading-tight text-slate-950">
-          {project.title}
-        </p>
-        <p className="mt-5 text-sm leading-7 text-slate-600">
-          {project.stack.join(' · ')}
-        </p>
-      </div>
-    )
+    return null
   }
 
   return (
@@ -38,7 +26,7 @@ function ProjectLinks({ links, labels }) {
   if (!links) return null
 
   return (
-    <div className="mt-7 flex flex-wrap gap-3">
+    <div className="mt-6 flex flex-wrap gap-3">
       {Object.entries(links).map(([type, href]) =>
         href ? (
           <a
@@ -57,48 +45,6 @@ function ProjectLinks({ links, labels }) {
   )
 }
 
-function Implementations({ project, t }) {
-  if (!project.implementations?.length) return null
-
-  return (
-    <div className="mt-10 border-t border-slate-200 pt-8">
-      <p className="section-kicker text-cyan-700">{t.projectLabels.implementations}</p>
-
-      <div className="mt-6 grid gap-6 md:grid-cols-2">
-        {project.implementations.map(item => (
-          <article key={item.name} className="implementation-row">
-            <div className="implementation-thumb">
-              {item.image ? (
-                <img src={item.image} alt={item.name} className="h-full w-full object-cover" />
-              ) : (
-                <span>{t.projectLabels.pendingImage}</span>
-              )}
-            </div>
-
-            <div>
-              <h4 className="text-lg font-bold text-slate-950">{item.name}</h4>
-              <p className="mt-3 text-sm leading-7 text-slate-600">{item.description}</p>
-              {item.site ? (
-                <a
-                  href={item.site}
-                  target="_blank"
-                  rel="noreferrer"
-                  className="mt-4 inline-flex items-center gap-2 text-sm font-semibold text-cyan-700 hover:text-cyan-900 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-cyan-500"
-                >
-                  <ExternalLink size={16} />
-                  {t.projectLabels.site}
-                </a>
-              ) : (
-                <p className="mt-4 text-sm font-semibold text-slate-500">{t.projectLabels.pendingUrl}</p>
-              )}
-            </div>
-          </article>
-        ))}
-      </div>
-    </div>
-  )
-}
-
 export default function Projects({ t, lang }) {
   const [selectedImage, setSelectedImage] = useState(null)
   const [activeFilter, setActiveFilter] = useState('all')
@@ -110,9 +56,9 @@ export default function Projects({ t, lang }) {
   }, [activeFilter, lang])
 
   const visibleProjects =
-    activeFilter === 'all' && !showMore ? filteredProjects.slice(0, 5) : filteredProjects
+    activeFilter === 'all' && !showMore ? filteredProjects.slice(0, 4) : filteredProjects
 
-  const hasMore = activeFilter === 'all' && filteredProjects.length > 5
+  const hasMore = activeFilter === 'all' && filteredProjects.length > 4
 
   const ctaLabels = {
     demo: t.projectLabels.demo,
@@ -149,7 +95,11 @@ export default function Projects({ t, lang }) {
           ))}
         </div>
 
-        <div className="mt-14 space-y-16">
+        {activeFilter === 'all' || activeFilter === 'development' ? (
+          <FeaturedProject t={t} lang={lang} />
+        ) : null}
+
+        <div className="mt-14 space-y-14">
           {visibleProjects.map((project, index) => {
             const imageFirst = index % 2 === 0
 
@@ -168,34 +118,32 @@ export default function Projects({ t, lang }) {
                     <span className="text-slate-500">{project.role}</span>
                   </div>
 
-                  <h3 className="mt-4 text-3xl font-bold leading-tight text-slate-950 md:text-4xl">
+                  <h3 className="mt-4 text-2xl font-bold leading-tight text-slate-950 md:text-3xl">
                     {project.title}
                   </h3>
 
-                  <p className="mt-5 text-base leading-8 text-slate-600">{project.context}</p>
+                  <p className="mt-5 max-w-3xl text-base leading-8 text-slate-600">
+                    {project.context}
+                  </p>
 
-                  <div className="mt-7 grid gap-6 border-t border-slate-200 pt-6 md:grid-cols-2">
+                  <div className="project-detail-grid">
                     <div>
                       <p className="text-sm font-bold text-slate-950">{t.projectLabels.contribution}</p>
-                      <p className="mt-3 text-sm leading-7 text-slate-600">{project.contribution}</p>
+                      <p className="mt-2 text-sm leading-7 text-slate-600">{project.contribution}</p>
                     </div>
 
                     <div>
                       <p className="text-sm font-bold text-slate-950">{t.projectLabels.impact}</p>
-                      <p className="mt-3 text-sm leading-7 text-slate-600">{project.impact}</p>
+                      <p className="mt-2 text-sm leading-7 text-slate-600">{project.impact}</p>
                     </div>
                   </div>
 
-                  <p className="mt-7 text-sm leading-7 text-slate-700">
+                  <p className="mt-6 text-sm leading-7 text-slate-700">
                     <strong className="text-slate-950">{t.projectLabels.technologies}:</strong>{' '}
                     {project.stack.join(' · ')}
                   </p>
 
                   <ProjectLinks links={project.links} labels={ctaLabels} />
-
-                  <Implementations project={project} t={t} />
-
-                  {project.featured ? <SystemArchitecture t={t} /> : null}
                 </div>
               </article>
             )
@@ -230,7 +178,7 @@ export default function Projects({ t, lang }) {
             <button
               onClick={() => setSelectedImage(null)}
               className="absolute -top-3 -right-3 flex h-10 w-10 items-center justify-center bg-white text-slate-950 shadow-xl transition hover:bg-cyan-100 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-cyan-300"
-              aria-label="Close"
+              aria-label={t.common.close}
             >
               x
             </button>

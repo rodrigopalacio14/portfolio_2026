@@ -12,19 +12,23 @@ export default function Hero({ t, lang }) {
             {t.hero.name}
           </p>
 
-          <h1 className="mt-5 text-4xl font-bold leading-[1.05] tracking-tight text-white md:text-6xl">
-            {t.hero.title}
+          <h1 className="hero-title mt-5 font-bold leading-[1.06] text-white md:text-6xl">
+            {t.hero.titleLines.map(line => (
+              <span className="block" key={line}>
+                {line}
+              </span>
+            ))}
           </h1>
 
           <p className="mt-7 max-w-2xl text-base leading-8 text-slate-300 md:text-lg">
             {t.hero.description}
           </p>
 
-          <p className="mt-5 max-w-2xl border-l border-cyan-300/50 pl-4 text-sm leading-7 text-slate-400">
+          <p className="hero-evidence mt-5 max-w-2xl border-l border-cyan-300/50 pl-4 text-sm leading-7 text-slate-400">
             {t.hero.evidence}
           </p>
 
-          <div className="mt-9 flex flex-wrap gap-3">
+          <div className="hero-actions mt-9 flex flex-wrap gap-3">
             <a href="#projects" className="btn-primary">
               {t.hero.primary}
             </a>

@@ -2,10 +2,10 @@ export const experience = {
   es: [
     {
       company: "BIT S.A.",
-      role: "ERP Analyst / Systems Implementation",
+      role: "ERP / Implementación de Sistemas",
       period: "2026 — Actualidad",
       description:
-        "Participación en implementación ERP para procesos administrativos, contables y operativos. Análisis funcional, soporte a usuarios, validación de procesos, resolución de incidentes, parametrización e interacción con equipos de desarrollo sobre entornos Oracle, SQL y PL/SQL."
+        "Participación en implementación ERP para procesos administrativos, contables y operativos. Análisis funcional, soporte a usuarios, validación de procesos, resolución de incidentes, parametrización e interacción con equipos de desarrollo sobre Oracle, SQL y PL/SQL."
     },
     {
       company: "Dirección General de Rentas de Córdoba",
@@ -13,7 +13,7 @@ export const experience = {
       period: "2022 — 2026",
       featured: true,
       description:
-        "Más de 4 años desarrollando soluciones de Data Analytics y Business Intelligence con Power BI, SQL, Oracle, Azure Databricks, Dataverse, Dynamics 365 y Looker. Trabajo en modelado analítico, KPIs, reporting ejecutivo, integración de datos, automatización y explotación de grandes volúmenes de información administrativa, tributaria y financiera. Incluye dashboards ejecutivos, DataMarts, conciliaciones, reglas de negocio y automatización de reporting."
+        "Más de 4 años desarrollando soluciones de Data Analytics y Business Intelligence con Power BI, SQL, Oracle, Azure Databricks, Dataverse, Dynamics 365 y Looker. Trabajo en modelado analítico, KPIs, reporting ejecutivo, integración de datos, automatización y análisis de información administrativa, tributaria y financiera."
     },
     {
       company: "Telemercado S.R.L. — Dirección General de Rentas",
@@ -37,7 +37,7 @@ export const experience = {
       role: "ERP Analyst / Systems Implementation",
       period: "2026 — Present",
       description:
-        "Participation in ERP implementation for administrative, accounting and operational processes. Functional analysis, user support, process validation, incident resolution, parameterization and interaction with development teams in Oracle, SQL and PL/SQL environments."
+        "Participation in ERP implementation for administrative, accounting and operational processes. Functional analysis, user support, process validation, incident resolution, parameterization and interaction with development teams using Oracle, SQL and PL/SQL."
     },
     {
       company: "Dirección General de Rentas de Córdoba",
@@ -45,7 +45,7 @@ export const experience = {
       period: "2022 — 2026",
       featured: true,
       description:
-        "4+ years developing Data Analytics and Business Intelligence solutions with Power BI, SQL, Oracle, Azure Databricks, Dataverse, Dynamics 365 and Looker. Work across analytical modeling, KPIs, executive reporting, data integration, automation and large administrative, tax and financial datasets. Includes executive dashboards, DataMarts, reconciliation processes, business rules and reporting automation."
+        "4+ years developing Data Analytics and Business Intelligence solutions with Power BI, SQL, Oracle, Azure Databricks, Dataverse, Dynamics 365 and Looker. Work across analytical modeling, KPIs, executive reporting, data integration, automation and administrative, tax and financial datasets."
     },
     {
       company: "Telemercado S.R.L. — Dirección General de Rentas",

@@ -4,66 +4,87 @@ import conciliacionImg from '../assets/projects/conciliacion-fondos.png'
 import datamartImg from '../assets/projects/datamart-tributario.png'
 import clinicaAppImg from '../assets/projects/clinica-app-winforms.png'
 
+export const featuredProject = {
+  es: {
+    title: "Níspero Tech",
+    subtitle: "Plataforma comercial multiempresa",
+    categoryLabel: "Desarrollo · Producto",
+    site: "https://nisperotech.com/",
+    intro:
+      "Construí una base común para desarrollar sitios y herramientas comerciales para distintos clientes sin empezar de cero cada vez.",
+    built:
+      "Cada negocio puede tener identidad visual, catálogo, productos, imágenes, usuarios, configuración y módulos propios, manteniendo una misma base tecnológica.",
+    stack: ["React", "JavaScript", "Supabase", "PostgreSQL", "REST APIs", "JSON", "Vercel"],
+    implementations: [
+      {
+        name: "Killa Joyas",
+        site: "https://killajoyas.com/",
+        description:
+          "Sitio comercial y catálogo adaptado a la identidad visual, productos e imagen del negocio."
+      },
+      {
+        name: "Puerto Pizza",
+        site: "",
+        description:
+          "Implementación para gastronomía con catálogo/menu digital, experiencia mobile-first y estructura preparada para operación comercial."
+      }
+    ]
+  },
+  en: {
+    title: "Níspero Tech",
+    subtitle: "Multi-company commercial platform",
+    categoryLabel: "Development · Product",
+    site: "https://nisperotech.com/",
+    intro:
+      "I built a shared foundation to develop commercial sites and tools for different clients without starting from scratch every time.",
+    built:
+      "Each business can define its own visual identity, catalog, products, images, users, configuration and modules while keeping the same technical base.",
+    stack: ["React", "JavaScript", "Supabase", "PostgreSQL", "REST APIs", "JSON", "Vercel"],
+    implementations: [
+      {
+        name: "Killa Joyas",
+        site: "https://killajoyas.com/",
+        description:
+          "Commercial site and catalog adapted to the business visual identity, products and brand image."
+      },
+      {
+        name: "Puerto Pizza",
+        site: "",
+        description:
+          "Food business implementation with digital catalog/menu, mobile-first experience and structure prepared for commercial operation."
+      }
+    ]
+  }
+}
+
 export const projects = {
   es: [
-    {
-      title: "Níspero Tech — Plataforma comercial multiempresa",
-      category: "development",
-      categoryLabel: "Development / Product",
-      role: "Full Stack Developer / Product Builder",
-      featured: true,
-      site: "https://nisperotech.com/",
-      context:
-        "Muchos pequeños negocios necesitan presencia digital y herramientas de gestión, pero desarrollar una aplicación distinta desde cero para cada cliente no es escalable.",
-      contribution:
-        "Diseñé una plataforma reutilizable que permite desplegar experiencias comerciales para distintos negocios sobre una misma arquitectura. Cada cliente puede tener identidad visual propia, catálogo, productos, imágenes, configuración, usuarios, módulos comerciales e información del negocio.",
-      impact:
-        "La base separa frontend, persistencia, autenticación, storage y configuración para adaptar implementaciones sin rehacer el producto completo.",
-      stack: ["React", "JavaScript", "Supabase", "PostgreSQL", "REST APIs", "JSON", "Git", "Vercel"],
-      links: { site: "https://nisperotech.com/" },
-      implementations: [
-        {
-          name: "Killa Joyas",
-          site: "https://killajoyas.com/",
-          image: "",
-          description:
-            "Sitio comercial y catálogo desarrollado sobre la arquitectura multiempresa, adaptando identidad visual, catálogo y experiencia de navegación al negocio."
-        },
-        {
-          name: "Puerto Pizza",
-          site: "",
-          image: "",
-          description:
-            "Implementación para gastronomía con catálogo/menu digital, experiencia mobile-first y estructura preparada para operación comercial."
-        }
-      ]
-    },
     {
       title: "DataMart Tributario en Azure Databricks",
       category: "data",
       categoryLabel: "Data & BI",
-      role: "Data Analyst / Data Engineering Support",
+      role: "Data Analyst / Data Engineering",
       image: datamartImg,
       context:
         "El consumo de tablas tributarias normalizadas requería múltiples joins manuales y reconstrucción de lógica fiscal.",
       contribution:
-        "Construí una capa analítica de consumo en Azure Databricks con notebooks SQL, Delta Tables y jobs, consolidando padrones por convenio, titulares vigentes, deuda, exenciones, facturación y pagos.",
+        "Construí una capa analítica en Azure Databricks con notebooks SQL, Delta Tables y jobs para consolidar padrones, deuda, exenciones, facturación y pagos.",
       impact:
-        "Criterios fiscales reutilizables, menos consultas manuales repetitivas y padrones municipales generados sobre grandes volúmenes de registros.",
+        "Criterios reutilizables y menos consultas manuales repetitivas sobre grandes volúmenes de registros.",
       stack: ["Azure Databricks", "SQL", "Delta Tables", "Notebooks", "Jobs", "DataMart", "Data Modeling"]
     },
     {
       title: "Sistema Gestión Clínica — .NET + Supabase",
       category: "development",
-      categoryLabel: "Development",
-      role: "Full Stack Developer",
+      categoryLabel: "Desarrollo",
+      role: "Desarrollo Full Stack",
       image: clinicaAppImg,
       context:
-        "El servicio requería registrar pacientes, atenciones, cirugías, seguimientos postquirúrgicos y maestros de manera estructurada.",
+        "El servicio necesitaba registrar pacientes, atenciones, cirugías, seguimientos y maestros de forma ordenada.",
       contribution:
-        "Desarrollé una aplicación de escritorio en C# con WinForms, POO, login, ABM, validaciones, conexión a Supabase/PostgreSQL y estructura modular por clases.",
+        "Desarrollé una aplicación de escritorio en C# con WinForms, login, ABM, validaciones, Supabase/PostgreSQL y estructura modular.",
       impact:
-        "Sistema funcional con gestión clínica, seguimiento de registros y persistencia cloud, integrando interfaz, lógica de negocio y base de datos.",
+        "Sistema funcional con interfaz, lógica de negocio y persistencia cloud para gestión clínica.",
       stack: ["C#", ".NET Framework", "WinForms", "Supabase", "PostgreSQL", "POO", "CRUD"]
     },
     {
@@ -73,25 +94,25 @@ export const projects = {
       role: "BI Analyst / Data Analytics",
       image: dynamicsImg,
       context:
-        "La migración de Planner hacia Dynamics 365 rompía la continuidad histórica de los indicadores.",
+        "La migración de Planner hacia Dynamics 365 rompía la continuidad histórica de indicadores.",
       contribution:
-        "Diseñé un modelo analítico unificado en Power BI, integrando histórico adaptado de Planner y operación actual en Dataverse bajo esquema estrella y métricas DAX con reglas de negocio.",
+        "Diseñé un modelo Power BI que integra histórico de Planner y operación actual en Dataverse con esquema estrella y métricas DAX.",
       impact:
-        "KPIs estratégicos centralizados, menos validaciones manuales y seguimiento más consistente para mandos medios y dirección.",
+        "KPIs centralizados y seguimiento más consistente para mandos medios y dirección.",
       stack: ["Power BI", "DAX", "Dynamics 365", "Dataverse", "Star Schema"]
     },
     {
       title: "Conciliación de Fondos",
       category: "automation",
-      categoryLabel: "Data & BI / Automation",
-      role: "Data Analyst / Data Integration",
+      categoryLabel: "Data & BI / Automatización",
+      role: "Data Analyst / Integraciones",
       image: conciliacionImg,
       context:
         "Los depósitos bancarios no permitían identificar de forma directa el origen de cada transacción para aproximadamente 150 municipios.",
       contribution:
-        "Diseñé un proceso de conciliación en Oracle Data Warehouse con tablas intermedias, reglas de agregación por fecha y convenio, refresh diario vía gateway y alertas automáticas por correo.",
+        "Diseñé un proceso en Oracle DWH con tablas intermedias, reglas por fecha/convenio, refresh diario vía gateway y alertas por correo.",
       impact:
-        "El proceso pasó de aproximadamente un mes a una semana, con mayor trazabilidad financiera y detección temprana de diferencias.",
+        "El proceso pasó de aproximadamente un mes a una semana, con mayor trazabilidad financiera.",
       stack: ["Oracle DWH", "SQL", "Power BI", "Gateway", "Automatización"]
     },
     {
@@ -101,87 +122,55 @@ export const projects = {
       role: "BI Analyst",
       image: traumaImg,
       context:
-        "El servicio necesitaba centralizar indicadores clínicos y operativos para revisar actividad, evolución histórica e intervenciones.",
+        "El servicio necesitaba centralizar indicadores clínicos y operativos para revisar actividad e intervenciones.",
       contribution:
-        "Diseñé un dashboard analítico en Looker para seguimiento de cirugías, pacientes, coberturas, progresión mensual y casuísticas por cirujano.",
+        "Diseñé un dashboard en Looker para seguimiento de cirugías, pacientes, coberturas, evolución mensual y casuísticas.",
       impact:
-        "Indicadores clínicos y administrativos disponibles en un punto común para análisis operativo del servicio.",
+        "Indicadores clínicos y administrativos disponibles en un punto común para análisis operativo.",
       stack: ["Looker", "SQL", "KPIs", "Healthcare Analytics"]
     },
     {
       title: "Integraciones de Datos mediante APIs REST",
       category: "automation",
-      categoryLabel: "Automation & APIs",
-      role: "Automation / Integration Developer",
+      categoryLabel: "Automatización & APIs",
+      role: "Desarrollo de Automatización e Integraciones",
       context:
-        "Aplicaciones y procesos analíticos necesitan consumir información externa o compartir datos entre servicios sin carga manual.",
+        "Aplicaciones y procesos analíticos necesitaban consumir o compartir datos sin carga manual.",
       contribution:
-        "Integré servicios externos mediante requests HTTP, procesamiento de JSON y uso de esa información dentro de aplicaciones y procesos analíticos.",
+        "Integré servicios mediante requests HTTP, procesamiento JSON y uso de datos externos dentro de aplicaciones y análisis.",
       impact:
-        "Experiencia práctica conectando APIs públicas, Supabase y procesamiento JSON dentro de soluciones de software y datos.",
+        "Conexiones prácticas entre APIs públicas, Supabase, JavaScript/C# y procesos de datos.",
       stack: ["REST APIs", "HTTP", "JSON", "C#", "JavaScript", "SQL", "Supabase"]
     },
     {
       title: "Implementación ERP y Automatización de Procesos",
       category: "systems",
-      categoryLabel: "Systems",
-      role: "ERP / Functional Analyst",
+      categoryLabel: "Sistemas",
+      role: "ERP / Análisis Funcional",
       context:
-        "La implementación de sistemas empresariales exige comprender procesos administrativos, contables y operativos.",
+        "La implementación de sistemas empresariales exige comprender circuitos administrativos, contables y operativos.",
       contribution:
-        "Trabajo en análisis funcional, soporte, parametrización, troubleshooting, validación de procesos e interacción con equipos de desarrollo sobre Oracle, SQL y PL/SQL.",
+        "Trabajo en análisis funcional, soporte, parametrización, troubleshooting y validación de procesos sobre Oracle, SQL y PL/SQL.",
       impact:
-        "Mejor trazabilidad de incidentes y comprensión directa de circuitos administrativos y operativos reales.",
+        "Mejor trazabilidad de incidentes y comprensión directa de circuitos empresariales reales.",
       stack: ["Oracle", "PL/SQL", "SQL", "ERP", "Análisis funcional", "Soporte", "Integraciones"]
     },
     {
       title: "Portfolio Profesional — React + Vite",
       category: "development",
-      categoryLabel: "Development",
-      role: "Frontend Developer",
+      categoryLabel: "Desarrollo",
+      role: "Desarrollo Frontend",
       context:
         "Necesitaba una presencia digital que explique rápido mi recorrido en datos, sistemas y desarrollo.",
       contribution:
-        "Diseñé y desarrollé un portfolio bilingüe con React, Vite y Tailwind, navegación por secciones, CV dinámico por idioma y formulario con Formspree.",
+        "Diseñé y desarrollé un portfolio bilingüe con React, Vite, navegación por secciones, CV por idioma y formulario con Formspree.",
       impact:
-        "Sitio responsive y mantenible para presentar proyectos reales, stack técnico y experiencia profesional a recruiters.",
+        "Sitio responsive para presentar proyectos, stack técnico y experiencia profesional a recruiters.",
       stack: ["React", "Vite", "Tailwind", "JavaScript", "Git", "Vercel"]
     }
   ],
 
   en: [
-    {
-      title: "Níspero Tech — Multi-company commercial platform",
-      category: "development",
-      categoryLabel: "Development / Product",
-      role: "Full Stack Developer / Product Builder",
-      featured: true,
-      site: "https://nisperotech.com/",
-      context:
-        "Many small businesses need a digital presence and management tools, but building a different application from scratch for every client is not scalable.",
-      contribution:
-        "I designed a reusable platform that deploys commercial experiences for different businesses on the same architecture. Each client can have its own visual identity, catalog, products, images, configuration, users, commercial modules and business information.",
-      impact:
-        "The base separates frontend, persistence, authentication, storage and configuration so implementations can be adapted without rebuilding the whole product.",
-      stack: ["React", "JavaScript", "Supabase", "PostgreSQL", "REST APIs", "JSON", "Git", "Vercel"],
-      links: { site: "https://nisperotech.com/" },
-      implementations: [
-        {
-          name: "Killa Joyas",
-          site: "https://killajoyas.com/",
-          image: "",
-          description:
-            "Commercial site and catalog built on the multi-company architecture, adapting visual identity, catalog and navigation experience to the business."
-        },
-        {
-          name: "Puerto Pizza",
-          site: "",
-          image: "",
-          description:
-            "Food business implementation with digital catalog/menu, mobile-first experience and structure prepared for commercial operation."
-        }
-      ]
-    },
     {
       title: "Tax DataMart in Azure Databricks",
       category: "data",
@@ -191,9 +180,9 @@ export const projects = {
       context:
         "Consuming normalized tax tables required multiple manual joins and fiscal logic reconstruction.",
       contribution:
-        "I built an analytical consumption layer in Azure Databricks with SQL notebooks, Delta Tables and jobs, consolidating registries by agreement, active owners, debt, exemptions, billing and payments.",
+        "I built an analytical layer in Azure Databricks with SQL notebooks, Delta Tables and jobs to consolidate registries, debt, exemptions, billing and payments.",
       impact:
-        "Reusable tax criteria, fewer repetitive manual queries and municipal registries generated over large datasets.",
+        "Reusable criteria and fewer repetitive manual queries over large datasets.",
       stack: ["Azure Databricks", "SQL", "Delta Tables", "Notebooks", "Jobs", "DataMart", "Data Modeling"]
     },
     {
@@ -203,11 +192,11 @@ export const projects = {
       role: "Full Stack Developer",
       image: clinicaAppImg,
       context:
-        "The service needed to register patients, appointments, surgeries, post-surgical follow-ups and master data in a structured way.",
+        "The service needed to register patients, appointments, surgeries, follow-ups and master data in an orderly way.",
       contribution:
-        "I developed a C# WinForms desktop application with OOP, login, CRUD operations, validations, Supabase/PostgreSQL connection and modular class structure.",
+        "I developed a C# WinForms desktop application with login, CRUD operations, validations, Supabase/PostgreSQL and a modular structure.",
       impact:
-        "Functional system with clinical management, record tracking and cloud persistence, integrating interface, business logic and database.",
+        "Functional system with interface, business logic and cloud persistence for clinical management.",
       stack: ["C#", ".NET Framework", "WinForms", "Supabase", "PostgreSQL", "OOP", "CRUD"]
     },
     {
@@ -219,9 +208,9 @@ export const projects = {
       context:
         "The migration from Planner to Dynamics 365 broke historical continuity across indicators.",
       contribution:
-        "I designed a unified analytical model in Power BI, integrating adapted Planner history with current Dataverse operations through a star schema and DAX metrics with business rules.",
+        "I designed a Power BI model that connects adapted Planner history with current Dataverse operations using a star schema and DAX metrics.",
       impact:
-        "Centralized strategic KPIs, fewer manual validations and more consistent tracking for middle management and leadership.",
+        "Centralized KPIs and more consistent tracking for middle management and leadership.",
       stack: ["Power BI", "DAX", "Dynamics 365", "Dataverse", "Star Schema"]
     },
     {
@@ -233,9 +222,9 @@ export const projects = {
       context:
         "Bank deposits could not directly identify the source of each transaction for approximately 150 municipalities.",
       contribution:
-        "I designed a reconciliation process in Oracle Data Warehouse with intermediate tables, aggregation rules by date and agreement, daily gateway refresh and automated email alerts.",
+        "I designed an Oracle DWH process with intermediate tables, rules by date/agreement, daily gateway refresh and email alerts.",
       impact:
-        "The process moved from approximately one month to one week, with better financial traceability and early difference detection.",
+        "The process moved from approximately one month to one week, with better financial traceability.",
       stack: ["Oracle DWH", "SQL", "Power BI", "Gateway", "Automation"]
     },
     {
@@ -245,11 +234,11 @@ export const projects = {
       role: "BI Analyst",
       image: traumaImg,
       context:
-        "The service needed to centralize clinical and operational indicators to review activity, historical evolution and procedures.",
+        "The service needed to centralize clinical and operational indicators to review activity and procedures.",
       contribution:
-        "I designed an analytical dashboard in Looker to monitor surgeries, patients, coverage, monthly progression and case distribution by surgeon.",
+        "I designed a Looker dashboard to monitor surgeries, patients, coverage, monthly evolution and case distribution.",
       impact:
-        "Clinical and administrative indicators available in one place for operational analysis of the service.",
+        "Clinical and administrative indicators available in one place for operational analysis.",
       stack: ["Looker", "SQL", "KPIs", "Healthcare Analytics"]
     },
     {
@@ -258,11 +247,11 @@ export const projects = {
       categoryLabel: "Automation & APIs",
       role: "Automation / Integration Developer",
       context:
-        "Applications and analytical processes need to consume external information or share data between services without manual work.",
+        "Applications and analytical processes needed to consume or share data without manual work.",
       contribution:
-        "I integrated external services through HTTP requests, JSON processing and use of that information inside applications and analytical processes.",
+        "I integrated services through HTTP requests, JSON processing and use of external data inside applications and analysis.",
       impact:
-        "Practical experience connecting public APIs, Supabase and JSON processing inside software and data solutions.",
+        "Practical connections between public APIs, Supabase, JavaScript/C# and data workflows.",
       stack: ["REST APIs", "HTTP", "JSON", "C#", "JavaScript", "SQL", "Supabase"]
     },
     {
@@ -271,11 +260,11 @@ export const projects = {
       categoryLabel: "Systems",
       role: "ERP / Functional Analyst",
       context:
-        "Enterprise system implementation requires understanding administrative, accounting and operational processes.",
+        "Enterprise system implementation requires understanding administrative, accounting and operational flows.",
       contribution:
-        "I work on functional analysis, support, parameterization, troubleshooting, process validation and interaction with development teams using Oracle, SQL and PL/SQL.",
+        "I work on functional analysis, support, parameterization, troubleshooting and process validation using Oracle, SQL and PL/SQL.",
       impact:
-        "Clearer incident traceability and direct understanding of real administrative and operational flows.",
+        "Clearer incident traceability and direct understanding of real enterprise workflows.",
       stack: ["Oracle", "PL/SQL", "SQL", "ERP", "Functional Analysis", "Support", "Integrations"]
     },
     {
@@ -286,9 +275,9 @@ export const projects = {
       context:
         "I needed a digital presence that quickly explains my path across data, systems and development.",
       contribution:
-        "I designed and developed a bilingual portfolio with React, Vite and Tailwind, section navigation, language-based CV downloads and a Formspree contact form.",
+        "I designed and developed a bilingual portfolio with React, Vite, section navigation, language-based CV downloads and a Formspree form.",
       impact:
-        "Responsive and maintainable site to present real projects, technical stack and professional experience to recruiters.",
+        "Responsive site to present projects, technical stack and professional experience to recruiters.",
       stack: ["React", "Vite", "Tailwind", "JavaScript", "Git", "Vercel"]
     }
   ]
