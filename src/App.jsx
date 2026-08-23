@@ -6,6 +6,7 @@ import ProfileAreas from './components/ProfileAreas'
 import Projects from './components/Projects'
 import Experience from './components/Experience'
 import Skills from './components/Skills'
+import HowIWork from './components/HowIWork'
 import Contact from './components/Contact'
 
 export default function App() {
@@ -25,6 +26,7 @@ export default function App() {
       <Projects t={t} lang={lang} />
       <Experience t={t} lang={lang} />
       <Skills t={t} lang={lang} />
+      <HowIWork t={t} lang={lang} />
       <Contact t={t} lang={lang} />
     </main>
   )

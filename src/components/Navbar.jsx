@@ -10,6 +10,7 @@ export default function Navbar({ lang, setLang, t }) {
     { id: 'projects', label: t.nav.projects },
     { id: 'experience', label: t.nav.experience },
     { id: 'stack', label: t.nav.stack },
+    { id: 'work', label: t.nav.work },
     { id: 'contact', label: t.nav.contact }
   ]
 
@@ -42,7 +43,7 @@ export default function Navbar({ lang, setLang, t }) {
 
   const linkClass = id =>
     `
-      rounded-full px-3 py-2 transition
+      rounded-full px-3 py-2 transition focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-cyan-300
       ${
         activeSection === id
           ? 'bg-cyan-400/15 text-cyan-300'
@@ -51,7 +52,7 @@ export default function Navbar({ lang, setLang, t }) {
     `
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 border-b border-white/10 bg-slate-950/85 backdrop-blur-xl">
+    <header className="fixed top-0 left-0 right-0 z-50 border-b border-white/10 bg-slate-950/80 backdrop-blur-xl">
       <nav className="section-container flex h-16 items-center justify-between">
         <a
           href="#home"
@@ -63,7 +64,7 @@ export default function Navbar({ lang, setLang, t }) {
           Rodrigo Palacio
         </a>
 
-        <div className="hidden items-center gap-2 text-sm md:flex">
+        <div className="hidden items-center gap-1 text-sm lg:flex">
           {navItems.map(item => (
             <a key={item.id} href={`#${item.id}`} className={linkClass(item.id)}>
               {item.label}
@@ -85,6 +86,7 @@ export default function Navbar({ lang, setLang, t }) {
                 transition-all duration-300
                 hover:-translate-y-1
                 hover:shadow-cyan-400/40
+                focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-cyan-300
               "
             >
               <Globe size={16} />
@@ -93,7 +95,7 @@ export default function Navbar({ lang, setLang, t }) {
 
           <button
             onClick={() => setIsOpen(!isOpen)}
-            className="flex h-10 w-10 items-center justify-center rounded-full border border-white/15 text-white transition hover:border-accent hover:text-accent md:hidden"
+            className="flex h-10 w-10 items-center justify-center rounded-full border border-white/15 text-white transition hover:border-accent hover:text-accent focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-cyan-300 lg:hidden"
           >
             {isOpen ? <X size={18} /> : <Menu size={18} />}
           </button>
@@ -101,7 +103,7 @@ export default function Navbar({ lang, setLang, t }) {
       </nav>
 
       {isOpen && (
-        <div className="border-t border-white/10 bg-slate-950/95 px-4 py-4 backdrop-blur-xl md:hidden">
+        <div className="border-t border-white/10 bg-slate-950/95 px-4 py-4 backdrop-blur-xl lg:hidden">
           <div className="mx-auto flex max-w-md flex-col gap-2">
             {navItems.map(item => (
               <a
