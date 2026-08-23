@@ -18,13 +18,13 @@ export const featuredProject = {
     implementations: [
       {
         name: "Killa Joyas",
-        site: "https://killajoyas.com/",
+        site: "https://nisperotech.com/killa",
         description:
           "Sitio comercial y catálogo adaptado a la identidad visual, productos e imagen del negocio."
       },
       {
         name: "Puerto Pizza",
-        site: "",
+        site: "https://nisperotech.com/puerto-pizza",
         description:
           "Implementación para gastronomía con catálogo/menu digital, experiencia mobile-first y estructura preparada para operación comercial."
       }
@@ -43,13 +43,13 @@ export const featuredProject = {
     implementations: [
       {
         name: "Killa Joyas",
-        site: "https://killajoyas.com/",
+        site: "https://nisperotech.com/killa",
         description:
           "Commercial site and catalog adapted to the business visual identity, products and brand image."
       },
       {
         name: "Puerto Pizza",
-        site: "",
+        site: "https://nisperotech.com/puerto-pizza",
         description:
           "Food business implementation with digital catalog/menu, mobile-first experience and structure prepared for commercial operation."
       }
