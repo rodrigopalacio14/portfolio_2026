@@ -19,7 +19,7 @@ export default function App() {
   const t = content[lang]
 
   return (
-    <main className="min-h-screen bg-slate-950 text-white">
+    <main className="min-h-screen bg-white text-slate-950">
       <Navbar lang={lang} setLang={setLang} t={t} />
       <Hero t={t} lang={lang} />
       <ProfileAreas t={t} lang={lang} />

@@ -1,15 +1,118 @@
 import { ExternalLink, Image as ImageIcon } from 'lucide-react'
 import { useMemo, useState } from 'react'
 import { projects } from '../data/projects'
+import SystemArchitecture from './SystemArchitecture'
+
+function ProjectVisual({ project, t, onOpen }) {
+  if (!project.image) {
+    return (
+      <div className="project-visual-placeholder">
+        <p className="text-sm font-semibold uppercase tracking-[0.18em] text-cyan-700">
+          {project.categoryLabel}
+        </p>
+        <p className="mt-6 max-w-sm text-3xl font-bold leading-tight text-slate-950">
+          {project.title}
+        </p>
+        <p className="mt-5 text-sm leading-7 text-slate-600">
+          {project.stack.join(' · ')}
+        </p>
+      </div>
+    )
+  }
+
+  return (
+    <figure className="project-visual">
+      <img src={project.image} alt={project.title} className="w-full object-contain" />
+      <button
+        onClick={() => onOpen(project)}
+        className="mt-3 inline-flex items-center gap-2 text-sm font-semibold text-cyan-700 hover:text-cyan-900 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-cyan-500"
+      >
+        <ImageIcon size={16} />
+        {t.projectLabels.viewImage}
+      </button>
+    </figure>
+  )
+}
+
+function ProjectLinks({ links, labels }) {
+  if (!links) return null
+
+  return (
+    <div className="mt-7 flex flex-wrap gap-3">
+      {Object.entries(links).map(([type, href]) =>
+        href ? (
+          <a
+            key={type}
+            href={href}
+            target="_blank"
+            rel="noreferrer"
+            className="inline-flex items-center gap-2 border border-slate-300 px-4 py-2 text-sm font-semibold text-slate-800 transition hover:border-cyan-500 hover:text-cyan-700 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-cyan-500"
+          >
+            <ExternalLink size={16} />
+            {labels[type]}
+          </a>
+        ) : null
+      )}
+    </div>
+  )
+}
+
+function Implementations({ project, t }) {
+  if (!project.implementations?.length) return null
+
+  return (
+    <div className="mt-10 border-t border-slate-200 pt-8">
+      <p className="section-kicker text-cyan-700">{t.projectLabels.implementations}</p>
+
+      <div className="mt-6 grid gap-6 md:grid-cols-2">
+        {project.implementations.map(item => (
+          <article key={item.name} className="implementation-row">
+            <div className="implementation-thumb">
+              {item.image ? (
+                <img src={item.image} alt={item.name} className="h-full w-full object-cover" />
+              ) : (
+                <span>{t.projectLabels.pendingImage}</span>
+              )}
+            </div>
+
+            <div>
+              <h4 className="text-lg font-bold text-slate-950">{item.name}</h4>
+              <p className="mt-3 text-sm leading-7 text-slate-600">{item.description}</p>
+              {item.site ? (
+                <a
+                  href={item.site}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="mt-4 inline-flex items-center gap-2 text-sm font-semibold text-cyan-700 hover:text-cyan-900 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-cyan-500"
+                >
+                  <ExternalLink size={16} />
+                  {t.projectLabels.site}
+                </a>
+              ) : (
+                <p className="mt-4 text-sm font-semibold text-slate-500">{t.projectLabels.pendingUrl}</p>
+              )}
+            </div>
+          </article>
+        ))}
+      </div>
+    </div>
+  )
+}
 
 export default function Projects({ t, lang }) {
   const [selectedImage, setSelectedImage] = useState(null)
   const [activeFilter, setActiveFilter] = useState('all')
+  const [showMore, setShowMore] = useState(false)
 
   const filteredProjects = useMemo(() => {
     if (activeFilter === 'all') return projects[lang]
     return projects[lang].filter(project => project.category === activeFilter)
   }, [activeFilter, lang])
+
+  const visibleProjects =
+    activeFilter === 'all' && !showMore ? filteredProjects.slice(0, 5) : filteredProjects
+
+  const hasMore = activeFilter === 'all' && filteredProjects.length > 5
 
   const ctaLabels = {
     demo: t.projectLabels.demo,
@@ -20,23 +123,25 @@ export default function Projects({ t, lang }) {
   return (
     <section id="projects" className="bg-slate-50 py-20 text-slate-950 md:py-24">
       <div className="section-container">
-        <div>
+        <div className="max-w-4xl">
           <p className="section-kicker text-cyan-700">{t.projectsTitle}</p>
-
-          <h2 className="mt-3 max-w-4xl text-3xl font-bold text-slate-950 md:text-4xl">
+          <h2 className="mt-4 text-3xl font-bold leading-tight md:text-4xl">
             {t.projectsSubtitle}
           </h2>
         </div>
 
-        <div className="mt-8 flex flex-wrap gap-2">
+        <div className="mt-8 flex flex-wrap gap-x-5 gap-y-3 border-y border-slate-200 py-4">
           {t.projectFilters.map(filter => (
             <button
               key={filter.id}
-              onClick={() => setActiveFilter(filter.id)}
-              className={`shrink-0 rounded-full border px-4 py-2 text-sm font-semibold transition focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-cyan-500 ${
+              onClick={() => {
+                setActiveFilter(filter.id)
+                setShowMore(false)
+              }}
+              className={`text-sm font-semibold transition focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-cyan-500 ${
                 activeFilter === filter.id
-                  ? 'border-cyan-500 bg-cyan-500 text-white shadow-lg shadow-cyan-500/20'
-                  : 'border-slate-200 bg-white text-slate-600 hover:border-cyan-300 hover:text-slate-950'
+                  ? 'text-cyan-700'
+                  : 'text-slate-600 hover:text-slate-950'
               }`}
             >
               {filter.label}
@@ -44,122 +149,87 @@ export default function Projects({ t, lang }) {
           ))}
         </div>
 
-        <div className="mt-12 grid gap-7 xl:grid-cols-2">
-          {filteredProjects.map(project => (
-            <article
-              key={project.title}
-              className="group overflow-hidden rounded-[24px] border border-slate-200 bg-white shadow-lg shadow-slate-200/70 transition duration-300 hover:-translate-y-1 hover:border-cyan-200 hover:shadow-xl hover:shadow-cyan-950/10"
-            >
-              {project.image ? (
-                <div className="relative overflow-hidden border-b border-slate-100 bg-slate-900">
-                  <img
-                    src={project.image}
-                    alt={project.title}
-                    onClick={() => setSelectedImage(project)}
-                    className="h-64 w-full cursor-pointer object-cover transition duration-500 group-hover:scale-[1.02] md:h-72"
-                  />
+        <div className="mt-14 space-y-16">
+          {visibleProjects.map((project, index) => {
+            const imageFirst = index % 2 === 0
 
-                  <button
-                    onClick={() => setSelectedImage(project)}
-                    className="absolute bottom-4 right-4 inline-flex items-center gap-2 rounded-full border border-white/20 bg-slate-950/70 px-4 py-2 text-sm font-semibold text-white backdrop-blur-md transition hover:bg-cyan-400 hover:text-slate-950 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-cyan-200"
-                  >
-                    <ImageIcon size={16} />
-                    {t.projectLabels.viewImage}
-                  </button>
-                </div>
-              ) : (
-                <div className="border-b border-slate-100 bg-gradient-to-br from-slate-900 via-slate-800 to-cyan-950 p-7 text-white">
-                  <p className="text-xs font-semibold uppercase tracking-[0.22em] text-cyan-200">
-                    {project.categoryLabel}
-                  </p>
-                  <div className="mt-8 h-24 rounded-2xl border border-white/10 bg-white/10 p-5 backdrop-blur">
-                    <p className="text-sm font-semibold text-slate-100">
-                      Systems, Data & Software
-                    </p>
-                    <p className="mt-2 text-sm text-slate-300">{project.title}</p>
-                  </div>
-                </div>
-              )}
+            return (
+              <article
+                key={project.title}
+                className={`project-case ${imageFirst ? '' : 'project-case-reverse'}`}
+              >
+                <ProjectVisual project={project} t={t} onOpen={setSelectedImage} />
 
-              <div className="p-6 md:p-7">
-                <div className="flex flex-wrap items-center gap-2">
-                  <span className="rounded-full bg-cyan-50 px-3 py-1 text-xs font-bold uppercase tracking-[0.12em] text-cyan-700">
-                    {project.categoryLabel}
-                  </span>
-                  <span className="rounded-full bg-slate-100 px-3 py-1 text-xs font-semibold text-slate-600">
-                    {project.role}
-                  </span>
-                </div>
-
-                <h3 className="mt-4 text-2xl font-bold leading-tight text-slate-950">
-                  {project.title}
-                </h3>
-
-                <div className="mt-6 space-y-4 text-sm leading-7 text-slate-600">
-                  <p>
-                    <strong className="text-slate-950">{t.projectLabels.problem}</strong>{' '}
-                    {project.problem}
-                  </p>
-
-                  <p>
-                    <strong className="text-slate-950">{t.projectLabels.solution}</strong>{' '}
-                    {project.solution}
-                  </p>
-
-                  <p>
-                    <strong className="text-slate-950">{t.projectLabels.result}</strong>{' '}
-                    {project.result}
-                  </p>
-                </div>
-
-                <div className="mt-7 flex flex-wrap gap-2">
-                  {project.stack.map(item => (
-                    <span key={item} className="pill border-slate-200 bg-slate-50 text-slate-700">
-                      {item}
+                <div className="project-copy">
+                  <div className="flex flex-wrap items-center gap-x-4 gap-y-2 text-sm">
+                    <span className="font-bold uppercase tracking-[0.14em] text-cyan-700">
+                      {project.categoryLabel}
                     </span>
-                  ))}
-                </div>
-
-                {project.links && (
-                  <div className="mt-7 flex flex-wrap gap-3">
-                    {Object.entries(project.links).map(([type, href]) => (
-                      href ? (
-                        <a
-                          key={type}
-                          href={href}
-                          target="_blank"
-                          rel="noreferrer"
-                          className="inline-flex items-center gap-2 rounded-full border border-slate-200 bg-white px-4 py-2 text-sm font-semibold text-slate-700 transition hover:border-cyan-300 hover:text-cyan-700 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-cyan-500"
-                        >
-                          <ExternalLink size={16} />
-                          {ctaLabels[type]}
-                        </a>
-                      ) : null
-                    ))}
+                    <span className="text-slate-500">{project.role}</span>
                   </div>
-                )}
-              </div>
-            </article>
-          ))}
+
+                  <h3 className="mt-4 text-3xl font-bold leading-tight text-slate-950 md:text-4xl">
+                    {project.title}
+                  </h3>
+
+                  <p className="mt-5 text-base leading-8 text-slate-600">{project.context}</p>
+
+                  <div className="mt-7 grid gap-6 border-t border-slate-200 pt-6 md:grid-cols-2">
+                    <div>
+                      <p className="text-sm font-bold text-slate-950">{t.projectLabels.contribution}</p>
+                      <p className="mt-3 text-sm leading-7 text-slate-600">{project.contribution}</p>
+                    </div>
+
+                    <div>
+                      <p className="text-sm font-bold text-slate-950">{t.projectLabels.impact}</p>
+                      <p className="mt-3 text-sm leading-7 text-slate-600">{project.impact}</p>
+                    </div>
+                  </div>
+
+                  <p className="mt-7 text-sm leading-7 text-slate-700">
+                    <strong className="text-slate-950">{t.projectLabels.technologies}:</strong>{' '}
+                    {project.stack.join(' · ')}
+                  </p>
+
+                  <ProjectLinks links={project.links} labels={ctaLabels} />
+
+                  <Implementations project={project} t={t} />
+
+                  {project.featured ? <SystemArchitecture t={t} /> : null}
+                </div>
+              </article>
+            )
+          })}
         </div>
+
+        {hasMore ? (
+          <div className="mt-14 border-t border-slate-200 pt-8 text-center">
+            <button
+              onClick={() => setShowMore(value => !value)}
+              className="border border-slate-300 px-5 py-3 text-sm font-semibold text-slate-800 transition hover:border-cyan-500 hover:text-cyan-700 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-cyan-500"
+            >
+              {showMore ? t.projectLabels.viewLess : t.projectLabels.viewMore}
+            </button>
+          </div>
+        ) : null}
       </div>
 
       {selectedImage && (
         <div
           onClick={() => setSelectedImage(null)}
-          className="fixed inset-0 z-50 flex items-center justify-center bg-slate-950/90 p-4 backdrop-blur-md"
+          className="fixed inset-0 z-50 flex items-center justify-center bg-slate-950/90 p-4"
           role="presentation"
         >
           <div className="relative" onClick={event => event.stopPropagation()}>
             <img
               src={selectedImage.image}
               alt={selectedImage.title}
-              className="max-h-[86vh] max-w-[94vw] rounded-2xl border border-white/10 shadow-2xl shadow-cyan-950/40"
+              className="max-h-[86vh] max-w-[94vw] border border-white/10 bg-white"
             />
 
             <button
               onClick={() => setSelectedImage(null)}
-              className="absolute -top-3 -right-3 flex h-10 w-10 items-center justify-center rounded-full bg-white text-slate-950 shadow-xl transition hover:scale-105 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-cyan-300"
+              className="absolute -top-3 -right-3 flex h-10 w-10 items-center justify-center bg-white text-slate-950 shadow-xl transition hover:bg-cyan-100 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-cyan-300"
               aria-label="Close"
             >
               x
