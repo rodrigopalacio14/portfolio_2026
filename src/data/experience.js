@@ -2,18 +2,19 @@ export const experience = {
   es: [
     {
       company: "BIT S.A.",
-      role: "ERP Analyst / Implementador",
+      role: "ERP Analyst / Systems Implementation",
       period: "2026 – Actualidad",
       description:
-        "Participación en proyectos de implementación funcional de sistemas ERP para procesos administrativos, contables y operativos. Análisis de circuitos de negocio, soporte a usuarios, validación de parametrizaciones, resolución de incidencias funcionales y comprensión integral de módulos administrativos, financieros e impositivos."
+        "Participación en implementación ERP para procesos administrativos, contables y operativos. Análisis funcional, soporte a usuarios, validación de procesos, resolución de incidentes, parametrización e interacción con equipos de desarrollo sobre entornos Oracle, SQL y PL/SQL."
     },
 
     {
-      company: "Kolektor – Dirección General de Rentas",
+      company: "Dirección General de Rentas de Córdoba",
       role: "Data Analyst / BI Analyst",
       period: "2022 – 2026",
+      featured: true,
       description:
-        "Desarrollo de dashboards ejecutivos y operativos en Power BI y Looker, automatización de reporting y análisis de datos para soporte en la toma de decisiones. Trabajo sobre Oracle Data Warehouse, Dataverse y Azure Databricks, construyendo procesos de integración, conciliación y explotación analítica sobre grandes volúmenes de información administrativa y financiera. Participación en modelado analítico, KPIs, SQL avanzado, automatización de procesos y optimización de tiempos operativos mediante soluciones basadas en datos."
+        "Más de 4 años desarrollando soluciones de Data Analytics y Business Intelligence con Power BI, SQL, Oracle, Azure Databricks, Dataverse, Dynamics 365 y Looker. Trabajo en modelado analítico, KPIs, reporting ejecutivo, integración de datos, automatización y explotación de grandes volúmenes de información administrativa, tributaria y financiera. Impacto real en reducción de tareas manuales y tiempos operativos en distintos procesos."
     },
 
     {
@@ -36,18 +37,19 @@ export const experience = {
   en: [
     {
       company: "BIT S.A.",
-      role: "ERP Analyst / Implementation Specialist",
+      role: "ERP Analyst / Systems Implementation",
       period: "2026 – Present",
       description:
-        "Participation in ERP implementation projects for administrative, accounting and operational processes. Business process analysis, user support, parameter validation, functional issue resolution and end-to-end understanding of administrative, financial and tax modules."
+        "Participation in ERP implementation for administrative, accounting and operational processes. Functional analysis, user support, process validation, incident resolution, parameterization and interaction with development teams in Oracle, SQL and PL/SQL environments."
     },
 
     {
-      company: "Kolektor – Dirección General de Rentas",
+      company: "Dirección General de Rentas de Córdoba",
       role: "Data Analyst / BI Analyst",
       period: "2022 – 2026",
+      featured: true,
       description:
-        "Development of executive and operational dashboards in Power BI and Looker, reporting automation and data analysis to support decision-making. Worked with Oracle Data Warehouse, Dataverse and Azure Databricks, building integration, reconciliation and analytical processes over large administrative and financial datasets. Participated in analytical modeling, KPI development, advanced SQL, process automation and operational time optimization through data-driven solutions."
+        "4+ years developing Data Analytics and Business Intelligence solutions with Power BI, SQL, Oracle, Azure Databricks, Dataverse, Dynamics 365 and Looker. Worked on analytical modeling, KPIs, executive reporting, data integration, automation and analysis over large administrative, tax and financial datasets. Real impact in reducing manual tasks and operational time across different processes."
     },
 
     {

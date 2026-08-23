@@ -1,17 +1,17 @@
-import { Mail } from 'lucide-react'
+import { MessageCircle } from 'lucide-react'
 import ContactForm from './ContactForm'
 
 export default function Contact({ t, lang }) {
   return (
     <section
       id="contact"
-      className="bg-gradient-to-b from-slate-950 to-slate-900/90 py-24"
+      className="bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950 py-20 md:py-24"
     >
       <div className="section-container">
         <div
           className="
             relative overflow-hidden
-            rounded-[36px]
+            rounded-[28px]
             border border-white/10
             bg-gradient-to-br
             from-cyan-500/15
@@ -37,9 +37,11 @@ export default function Contact({ t, lang }) {
              
 
               <a
-                href="https://www.linkedin.com/in/rodrigo-palacio-schunke-07438613a/"
+                href="https://www.linkedin.com/in/rodrigo-sebastian-palacio-schunke-07438613a/"
                 target="_blank"
+                rel="noreferrer"
                 className="
+                  inline-flex items-center gap-2
                   rounded-full
                   bg-[#0A66C2]
                   px-6 py-3
@@ -71,7 +73,8 @@ export default function Contact({ t, lang }) {
                     hover:bg-[#1ebe5d]
                   "
                 >
-                  WhatsApp
+                  <MessageCircle size={18} />
+                  {t.contactButtons.whatsapp}
                 </a>
               
             </div>

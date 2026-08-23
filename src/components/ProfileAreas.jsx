@@ -4,10 +4,10 @@ export default function ProfileAreas({ t, lang }) {
   return (
     <section
       id="profile"
-      className="bg-gradient-to-b from-slate-950 to-slate-900/80 py-24"
+      className="bg-gradient-to-b from-slate-950 via-slate-900 to-slate-900 py-20 md:py-24"
     >
       <div className="section-container">
-        <p className="text-sm font-semibold uppercase tracking-[0.25em] text-accent">
+        <p className="section-kicker text-cyan-300">
           {t.areasTitle}
         </p>
 
@@ -15,15 +15,15 @@ export default function ProfileAreas({ t, lang }) {
           {t.areasSubtitle}
         </h2>
 
-        <div className="mt-12 grid gap-6 md:grid-cols-2 xl:grid-cols-4">
+        <div className="mt-12 grid gap-5 md:grid-cols-2 xl:grid-cols-4">
           {areas[lang].map(area => (
             <article
               key={area.title}
               className="
                 group
-                rounded-3xl
+                rounded-[24px]
                 border border-white/10
-                bg-gradient-to-br from-white/[0.08] to-white/[0.03]
+                bg-gradient-to-br from-white/[0.10] to-white/[0.04]
                 p-7
                 shadow-xl
                 backdrop-blur-sm
