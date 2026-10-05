@@ -6,35 +6,35 @@ import clinicaAppImg from '../assets/projects/clinica-app-winforms.png'
 
 export const featuredProject = {
   es: {
-    title: "Níspero Tech",
+    title: "Palaya App",
     subtitle: "Plataforma comercial multiempresa",
     categoryLabel: "Desarrollo · Producto",
-    site: "https://nisperotech.com/",
+    site: "https://palaya.app/",
     intro:
-      "Construí una base común para desarrollar sitios y herramientas comerciales para distintos clientes sin empezar de cero cada vez.",
+      "Construí una base común para desarrollar sitios web y herramientas comerciales para distintos clientes sin empezar de cero cada vez.",
     built:
       "Cada negocio puede tener identidad visual, catálogo, productos, imágenes, usuarios, configuración y módulos propios, manteniendo una misma base tecnológica.",
     stack: ["React", "JavaScript", "Supabase", "PostgreSQL", "REST APIs", "JSON", "Vercel"],
     implementations: [
       {
         name: "Killa Joyas",
-        site: "https://nisperotech.com/killa",
+        site: "https://palaya.app/killa",
         description:
           "Sitio comercial y catálogo adaptado a la identidad visual, productos e imagen del negocio."
       },
       {
         name: "Puerto Pizza",
-        site: "https://nisperotech.com/puerto-pizza",
+        site: "https://palaya.app/puerto-pizza",
         description:
           "Implementación para gastronomía con catálogo/menu digital, experiencia mobile-first y estructura preparada para operación comercial."
       }
     ]
   },
   en: {
-    title: "Níspero Tech",
+    title: "Palaya App",
     subtitle: "Multi-company commercial platform",
     categoryLabel: "Development · Product",
-    site: "https://nisperotech.com/",
+    site: "https://palaya.app/",
     intro:
       "I built a shared foundation to develop commercial sites and tools for different clients without starting from scratch every time.",
     built:
@@ -43,13 +43,13 @@ export const featuredProject = {
     implementations: [
       {
         name: "Killa Joyas",
-        site: "https://nisperotech.com/killa",
+        site: "https://palaya.app/killa",
         description:
           "Commercial site and catalog adapted to the business visual identity, products and brand image."
       },
       {
         name: "Puerto Pizza",
-        site: "https://nisperotech.com/puerto-pizza",
+        site: "https://palaya.app/puerto-pizza",
         description:
           "Food business implementation with digital catalog/menu, mobile-first experience and structure prepared for commercial operation."
       }
