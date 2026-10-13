@@ -1,3 +1,6 @@
+import killaImg from '../assets/projects/palaya/killa.webp'
+import katanasImg from '../assets/projects/palaya/tres-katanas.webp'
+import pizzaImg from '../assets/projects/palaya/puerto-pizza.webp'
 import traumaImg from '../assets/projects/traumatologia-dashboard.png'
 import dynamicsImg from '../assets/projects/dynamics-dashboard.png'
 import conciliacionImg from '../assets/projects/conciliacion-fondos.png'
@@ -11,19 +14,26 @@ export const featuredProject = {
     categoryLabel: "Desarrollo · Producto",
     site: "https://palaya.app/",
     intro:
-      "Construí una base común para desarrollar sitios web y herramientas comerciales para distintos clientes sin empezar de cero cada vez.",
+      "Diseñé y desarrollé una plataforma que conecta sitios comerciales, catálogos y herramientas de gestión. Cada negocio tiene su propia identidad sobre una base tecnológica común.",
     built:
       "Cada negocio puede tener identidad visual, catálogo, productos, imágenes, usuarios, configuración y módulos propios, manteniendo una misma base tecnológica.",
     stack: ["React", "JavaScript", "Supabase", "PostgreSQL", "REST APIs", "JSON", "Vercel"],
     implementations: [
       {
         name: "Killa Joyas",
+        slug: "killa", image: killaImg, sector: "Joyas · Ecommerce",
         site: "https://palaya.app/killa",
         description:
           "Sitio comercial y catálogo adaptado a la identidad visual, productos e imagen del negocio."
       },
       {
+        name: "Tres Katanas", slug: "tres-katanas", image: katanasImg, sector: "Perfumes · Retail",
+        site: "https://palaya.app/tres-katanas",
+        description: "Catálogo de perfumes importados con categorías, fichas de producto y consultas directas por WhatsApp."
+      },
+      {
         name: "Puerto Pizza",
+        slug: "puerto-pizza", image: pizzaImg, sector: "Gastronomía · Menú digital",
         site: "https://palaya.app/puerto-pizza",
         description:
           "Implementación para gastronomía con catálogo/menu digital, experiencia mobile-first y estructura preparada para operación comercial."
@@ -36,19 +46,26 @@ export const featuredProject = {
     categoryLabel: "Development · Product",
     site: "https://palaya.app/",
     intro:
-      "I built a shared foundation to develop commercial sites and tools for different clients without starting from scratch every time.",
+      "I designed and developed a platform connecting commercial websites, catalogs and management tools. Each business has its own identity on a shared technical foundation.",
     built:
       "Each business can define its own visual identity, catalog, products, images, users, configuration and modules while keeping the same technical base.",
     stack: ["React", "JavaScript", "Supabase", "PostgreSQL", "REST APIs", "JSON", "Vercel"],
     implementations: [
       {
         name: "Killa Joyas",
+        slug: "killa", image: killaImg, sector: "Jewelry · Ecommerce",
         site: "https://palaya.app/killa",
         description:
           "Commercial site and catalog adapted to the business visual identity, products and brand image."
       },
       {
+        name: "Tres Katanas", slug: "tres-katanas", image: katanasImg, sector: "Fragrances · Retail",
+        site: "https://palaya.app/tres-katanas",
+        description: "Imported fragrance catalog with categories, product details and direct WhatsApp inquiries."
+      },
+      {
         name: "Puerto Pizza",
+        slug: "puerto-pizza", image: pizzaImg, sector: "Food · Digital menu",
         site: "https://palaya.app/puerto-pizza",
         description:
           "Food business implementation with digital catalog/menu, mobile-first experience and structure prepared for commercial operation."

@@ -31,7 +31,7 @@ export const content = {
       "Trabajo desde la consulta SQL y el modelo de datos hasta el dashboard, la integración o la aplicación que usa el usuario.",
     projectsTitle: "Proyectos destacados",
     projectsSubtitle:
-      "Una selección corta para ver rápido qué construí, qué tecnologías usé y qué parte resolví personalmente.",
+      "Del dato al producto. Soluciones que construí.",
     projectLabels: {
       contribution: "Mi aporte",
       impact: "Resultado",
@@ -43,7 +43,7 @@ export const content = {
       demo: "Ver demo",
       site: "Ver sitio",
       github: "Ver GitHub",
-      viewNispero: "Ver Níspero Tech",
+      viewPalaya: "Ver Palaya",
       builtTitle: "Qué construí"
     },
     projectFilters: [
@@ -56,7 +56,7 @@ export const content = {
     architecture: {
       title: "Arquitectura de la plataforma",
       subtitle:
-        "Un esquema simple de cómo se organiza la base común de Níspero Tech.",
+        "Un esquema simple de cómo se organiza la base común de Palaya.",
       implementationsLabel: "Implementaciones",
       layers: [
         { label: "USUARIO", detail: "Clientes y administradores" },
@@ -65,7 +65,7 @@ export const content = {
         { label: "NEGOCIO & INTEGRACIONES", detail: "Productos · Catálogo · Ventas · Stock · REST APIs · JSON" },
         { label: "DESPLIEGUE", detail: "Vercel" }
       ],
-      implementations: "Killa Joyas · Puerto Pizza"
+      implementations: "Killa Joyas · Tres Katanas · Puerto Pizza"
     },
     experienceTitle: "Experiencia profesional",
     experienceSubtitle:
@@ -130,7 +130,7 @@ export const content = {
       "I work from the SQL query and data model to the dashboard, integration or application used by the end user.",
     projectsTitle: "Featured projects",
     projectsSubtitle:
-      "A short selection to quickly understand what I built, which technologies I used and what I personally solved.",
+      "From data to product. Solutions I built.",
     projectLabels: {
       contribution: "My work",
       impact: "Result",
@@ -142,7 +142,7 @@ export const content = {
       demo: "View demo",
       site: "View site",
       github: "View GitHub",
-      viewNispero: "View Níspero Tech",
+      viewPalaya: "View Palaya",
       builtTitle: "What I built"
     },
     projectFilters: [
@@ -155,7 +155,7 @@ export const content = {
     architecture: {
       title: "Platform architecture",
       subtitle:
-        "A simple view of how Níspero Tech's shared foundation is organized.",
+        "A simple view of how Palaya's shared foundation is organized.",
       implementationsLabel: "Implementations",
       layers: [
         { label: "USER", detail: "Customers and administrators" },
@@ -164,7 +164,7 @@ export const content = {
         { label: "BUSINESS & INTEGRATIONS", detail: "Products · Catalog · Sales · Stock · REST APIs · JSON" },
         { label: "DEPLOY", detail: "Vercel" }
       ],
-      implementations: "Killa Joyas · Puerto Pizza"
+      implementations: "Killa Joyas · Tres Katanas · Puerto Pizza"
     },
     experienceTitle: "Professional experience",
     experienceSubtitle:

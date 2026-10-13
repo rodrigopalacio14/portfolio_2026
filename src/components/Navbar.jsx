@@ -10,7 +10,6 @@ export default function Navbar({ lang, setLang, t }) {
     { id: 'projects', label: t.nav.projects },
     { id: 'experience', label: t.nav.experience },
     { id: 'stack', label: t.nav.stack },
-    { id: 'work', label: t.nav.work },
     { id: 'contact', label: t.nav.contact }
   ]
 

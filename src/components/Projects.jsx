@@ -1,5 +1,5 @@
 import { ExternalLink, Image as ImageIcon } from 'lucide-react'
-import { useMemo, useState } from 'react'
+import { useEffect, useMemo, useRef, useState } from 'react'
 import { projects } from '../data/projects'
 import FeaturedProject from './FeaturedProject'
 
@@ -47,6 +47,20 @@ function ProjectLinks({ links, labels }) {
 
 export default function Projects({ t, lang }) {
   const [selectedImage, setSelectedImage] = useState(null)
+  const dialogRef = useRef(null)
+  useEffect(() => {
+    if (!selectedImage) return
+    const previousFocus = document.activeElement
+    const previousOverflow = document.body.style.overflow
+    document.body.style.overflow = 'hidden'
+    dialogRef.current?.focus()
+    function handleKey(event) {
+      if (event.key === 'Escape') setSelectedImage(null)
+      if (event.key === 'Tab') { event.preventDefault(); dialogRef.current?.querySelector('button')?.focus() }
+    }
+    document.addEventListener('keydown', handleKey)
+    return () => { document.body.style.overflow = previousOverflow; document.removeEventListener('keydown', handleKey); previousFocus?.focus() }
+  }, [selectedImage])
   const [activeFilter, setActiveFilter] = useState('all')
   const [showMore, setShowMore] = useState(false)
 
@@ -80,6 +94,7 @@ export default function Projects({ t, lang }) {
           {t.projectFilters.map(filter => (
             <button
               key={filter.id}
+              aria-pressed={activeFilter === filter.id}
               onClick={() => {
                 setActiveFilter(filter.id)
                 setShowMore(false)
@@ -96,10 +111,10 @@ export default function Projects({ t, lang }) {
         </div>
 
         {activeFilter === 'all' || activeFilter === 'development' ? (
-          <FeaturedProject t={t} lang={lang} />
+          <FeaturedProject t={t} lang={lang} onOpenImage={setSelectedImage} />
         ) : null}
 
-        <div className="mt-14 space-y-14">
+        <div className="project-gallery">
           {visibleProjects.map((project, index) => {
             const imageFirst = index % 2 === 0
 
@@ -168,7 +183,7 @@ export default function Projects({ t, lang }) {
           className="fixed inset-0 z-50 flex items-center justify-center bg-slate-950/90 p-4"
           role="presentation"
         >
-          <div className="relative" onClick={event => event.stopPropagation()}>
+          <div ref={dialogRef} tabIndex={-1} role="dialog" aria-modal="true" aria-label={selectedImage.title} className="relative" onClick={event => event.stopPropagation()}>
             <img
               src={selectedImage.image}
               alt={selectedImage.title}
