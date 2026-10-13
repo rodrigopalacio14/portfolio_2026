@@ -249,14 +249,14 @@ export const areas = {
 export const skillGroups = {
   es: [
     { title: "DATA & BI", items: ["Power BI", "SQL", "DAX", "Looker", "Azure Databricks", "Python", "ETL", "Data Modeling"] },
-    { title: "DESARROLLO", items: ["C#", ".NET", "WinForms", "React", "JavaScript", "Bootstrap"] },
+    { title: "DESARROLLO", items: ["C#", ".NET", "WinForms", "Java", "React", "JavaScript", "Bootstrap"] },
     { title: "BASES DE DATOS", items: ["Oracle", "PL/SQL", "PostgreSQL", "Supabase", "SQL Server", "Dataverse"] },
     { title: "HERRAMIENTAS & INTEGRACIONES", items: ["REST APIs", "JSON", "Power Automate", "Git", "Postman", "Jira", "Vercel"] }
   ],
 
   en: [
     { title: "DATA & BI", items: ["Power BI", "SQL", "DAX", "Looker", "Azure Databricks", "Python", "ETL", "Data Modeling"] },
-    { title: "DEVELOPMENT", items: ["C#", ".NET", "WinForms", "React", "JavaScript", "Bootstrap"] },
+    { title: "DEVELOPMENT", items: ["C#", ".NET", "WinForms", "Java", "React", "JavaScript", "Bootstrap"] },
     { title: "DATABASES", items: ["Oracle", "PL/SQL", "PostgreSQL", "Supabase", "SQL Server", "Dataverse"] },
     { title: "TOOLS & INTEGRATIONS", items: ["REST APIs", "JSON", "Power Automate", "Git", "Postman", "Jira", "Vercel"] }
   ]
