@@ -26,7 +26,7 @@ export default function Contact({ t, lang }) {
              
 
                 <a
-                href="https://www.linkedin.com/in/rodrigo-sebastian-palacio-schunke-07438613a/"
+                href="https://www.linkedin.com/in/rodrigo-palacio-schunke-07438613a"
                 target="_blank"
                 rel="noreferrer"
                   className="inline-flex items-center gap-2 border border-white/15 px-5 py-3 font-semibold text-white transition hover:border-cyan-300 hover:text-cyan-300 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-cyan-300"
